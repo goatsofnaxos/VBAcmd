@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/VBAcmd.iml" filepath="$PROJECT_DIR$/.idea/VBAcmd.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/eclipse.iml" filepath="$PROJECT_DIR$/../.idea/eclipse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../oldStuff/helloworld/.idea/helloworld.iml" filepath="$PROJECT_DIR$/../../oldStuff/helloworld/.idea/helloworld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../lib/.idea/lib.iml" filepath="$PROJECT_DIR$/../../lib/.idea/lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../loopCloser/.idea/loopCloser.iml" filepath="$PROJECT_DIR$/../loopCloser/.idea/loopCloser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../olfactometer/.idea/olfactometer.iml" filepath="$PROJECT_DIR$/../olfactometer/.idea/olfactometer.iml" />
+    </modules>
+  </component>
+</project>
