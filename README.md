@@ -7,7 +7,7 @@ run VBAcmd1.pyw
 
 Requires:
   - Virtual Burrow Assay (see TK)
-  - NI card with analog and digital in/out (e.g. http://sine.ni.com/nips/cds/view/p/lang/en/nid/201986)
+  - NI card with analog and digital in/out (e.g. USB-6008 http://sine.ni.com/nips/cds/view/p/lang/en/nid/201986)
     - ai0: laser sensor   (scaling in script for MICRO-EPSILON ILD1302-50)
     - ai1: force sensor   (scaling in script for FUTEK FSH02664 load cell with FUTEK QSH00602 signal conditioner in +/-5 VDC mode)
     - ai2: servo position (scaling in script for FIRGELLI L12-30-50-12-I)
