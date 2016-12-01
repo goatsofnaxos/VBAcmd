@@ -54,7 +54,7 @@
         <item>
          <widget class="QDoubleSpinBox" name="aiRangeMaxSpinBox">
           <property name="decimals">
-           <number>1</number>
+           <number>2</number>
           </property>
           <property name="minimum">
            <double>-20.000000000000000</double>
@@ -80,7 +80,7 @@
         <item>
          <widget class="QDoubleSpinBox" name="aiRangeMinSpinBox">
           <property name="decimals">
-           <number>1</number>
+           <number>2</number>
           </property>
           <property name="minimum">
            <double>-20.000000000000000</double>
@@ -122,7 +122,7 @@
              </font>
             </property>
             <property name="text">
-             <string>Analog input (arb. unit)</string>
+             <string>Analog input (V)</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -775,7 +775,6 @@
    <zorder></zorder>
    <zorder></zorder>
    <zorder>line_3</zorder>
-   <zorder>layoutWidget</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

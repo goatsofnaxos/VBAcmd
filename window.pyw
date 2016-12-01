@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'C:\Users\All\Desktop\pyscript\eclipse\VBAcmd\VBAcmd.ui'
 #
-# Created: Thu Dec 01 15:54:41 2016
+# Created: Thu Dec 01 16:36:47 2016
 #      by: PyQt4 UI code generator 4.9.6
 #
 # WARNING! All changes made in this file will be lost!
@@ -48,7 +48,7 @@ class Ui_MainWindow(object):
         self.label_8.setObjectName(_fromUtf8("label_8"))
         self.verticalLayout_11.addWidget(self.label_8)
         self.aiRangeMaxSpinBox = QtGui.QDoubleSpinBox(self.centralwidget)
-        self.aiRangeMaxSpinBox.setDecimals(1)
+        self.aiRangeMaxSpinBox.setDecimals(2)
         self.aiRangeMaxSpinBox.setMinimum(-20.0)
         self.aiRangeMaxSpinBox.setMaximum(20.0)
         self.aiRangeMaxSpinBox.setSingleStep(1.0)
@@ -59,7 +59,7 @@ class Ui_MainWindow(object):
         self.label_9.setObjectName(_fromUtf8("label_9"))
         self.verticalLayout_11.addWidget(self.label_9)
         self.aiRangeMinSpinBox = QtGui.QDoubleSpinBox(self.centralwidget)
-        self.aiRangeMinSpinBox.setDecimals(1)
+        self.aiRangeMinSpinBox.setDecimals(2)
         self.aiRangeMinSpinBox.setMinimum(-20.0)
         self.aiRangeMinSpinBox.setMaximum(20.0)
         self.aiRangeMinSpinBox.setSingleStep(1.0)
@@ -357,7 +357,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "VBAcmd", None))
         self.label_8.setText(_translate("MainWindow", "RangeMax", None))
         self.label_9.setText(_translate("MainWindow", "RangeMin", None))
-        self.chartTitle_laserPosition_2.setText(_translate("MainWindow", "Analog input (arb. unit)", None))
+        self.chartTitle_laserPosition_2.setText(_translate("MainWindow", "Analog input (V)", None))
         self.label.setText(_translate("MainWindow", "Laser θ", None))
         self.label_2.setText(_translate("MainWindow", "Laser wait (s)", None))
         self.label_4.setText(_translate("MainWindow", "Servo wait (s)", None))
