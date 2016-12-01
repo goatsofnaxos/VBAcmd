@@ -22,3 +22,5 @@ Requires:
   - ParamLoad available at https://github.com/goatsofnaxos/lib  
   
 We are not coders. This is likely to be buggy, inefficient and recalcitrant to distribution across different platforms--and so welcome any assistance.
+
+![alt tag](https://raw.githubusercontent.com/goatsofnaxos/VBAcmd/master/screengrab.png)
