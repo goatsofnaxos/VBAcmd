@@ -21,7 +21,7 @@ Requires:
   - PyDAQmx available at https://pythonhosted.org/PyDAQmx/
   - PyQt4
   - transitions available at https://github.com/tyarkoni/transitions
-  - ParamLoad available at https://github.com/goatsofnaxos/lib  
+  - ParamLoad and Scaling available at https://github.com/goatsofnaxos/lib  
   
 We are not coders. This is likely to be buggy, inefficient and recalcitrant to distribution across different platforms--and so welcome any assistance.
 
