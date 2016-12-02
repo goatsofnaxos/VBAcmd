@@ -3,7 +3,9 @@ Control software for Virtual Burrow Assay
 
 Runs on Windows 7, Python 2.7 (WinPython distribution)
 
-run VBAcmd2.pyw
+Instructions:
+  - Rename config.py.template to config.py and if necessary correct DAQ / scaling parameters in the new .py file (git pull will not modify your local config.py file)
+  - Run VBAcmd2.pyw
 
 Requires:
   - Virtual Burrow Assay (see TK)
