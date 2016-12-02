@@ -13,7 +13,7 @@ from PyQt4 import uic
 curpath = path.dirname(path.realpath(__file__))
 chdir(curpath)
 uic.compileUiDir(curpath)
-LOAD CONFIGURATION HERE
+#LOAD CONFIGURATION HERE
 
 from PyQt4 import QtGui, QtCore, Qt
 import PyQt4.Qwt5 as Qwt
@@ -23,6 +23,7 @@ from PyDAQmx import *
 from time import time
 import numpy
 from ParamLoad import ParamLoad
+from VBAconfig import VBAconfig
 from Scaling import Scaling
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
@@ -34,12 +35,35 @@ class DAQCallbackTask(Task):
 
     def __init__(self,initialUsrPrms):
 
+        Task.__init__(self)
+
+        # Load hardware configuration and previous paramaeters if extant
+        vbaconfig = VBAconfig()
         self.initialUsrPrms = initialUsrPrms
 
-        Task.__init__(self)
-        # ANALOG INPUT (ai0: Laser / ai1: Force / ai2: Servo position / ai3: Analog input)
-        self.numChannels =    4
-        self.aiChannelIDs =   "dev5/ai0:3"
+        # Set up scaling
+        #self.offsetForce =    0
+        #self.scaleForce =     10
+        #self.rangeServo =     [0, 30]    # travel range   0 to 30 mm
+        #self.rangeServoVout = [0, 3.3]   # output signal  0 to 3.3 V
+        #self.offsetServo =    0                                           # 30 mm range encoded
+        #self.scaleServo =     self.rangeServo[1] / self.rangeServoVout[1] # between 0V and 3.3 V
+        #self.rangeServoSet =  [0.0, 5.0] # command range  0 to 5 V
+        #self.rangeLaser =     [0, 50]  # 0 to 50 mm
+        #self.rangeLaserVout = [1, 5]   # 1V to 5V
+        #self.offsetLaser =    1                                                                    # 50 mm range encoded
+        #self.scaleLaser =     self.rangeLaser[1] / (self.rangeLaserVout[1]-self.rangeLaserVout[0]) # between 1V and 5V
+
+
+        self.scaleLaser    = Scaling(vbaconfig.encoding['rangeLaser'],vbaconfig.encoding['rangeLaserVout'])
+        self.scaleForce    = Scaling(vbaconfig.encoding['rangeForce'],vbaconfig.encoding['rangeForceVout'])
+        self.scaleServo    = Scaling(vbaconfig.encoding['rangeServo'],vbaconfig.encoding['rangeServoVout'])
+        self.scaleServoSet = Scaling(vbaconfig.encoding['rangeServoSet'],vbaconfig.encoding['rangeServoSetVcmd'])
+
+
+        # ANALOG INPUT (Laser / Force / Servo position / Optional analog input)
+        self.numChannels =    vbaconfig.channels['ainumchanels']
+        self.aiChannelIDs =   vbaconfig.channels['aiChannelIDs']
         self.airt =           1000 # Hz
         self.DAQBufferEpoch = 100 # ms
         self.numBuffsPerSec = int(round(1000 / self.DAQBufferEpoch)) # Hz
@@ -49,20 +73,6 @@ class DAQCallbackTask(Task):
         self.autostart =      0
         self.read =           int32()
         self.totNumBuffers =  int(0)
-        # Hardware ranges and scaling factors
-        ''' Now handled by config.py
-        self.offsetForce =    0
-        self.scaleForce =     10
-        self.rangeServo =     [0, 30]    # travel range   0 to 30 mm
-        self.rangeServoVout = [0, 3.3]   # output signal  0 to 3.3 V
-        self.offsetServo =    0                                           # 30 mm range encoded
-        self.scaleServo =     self.rangeServo[1] / self.rangeServoVout[1] # between 0V and 3.3 V
-        self.rangeServoSet =  [0.0, 5.0] # command range  0 to 5 V
-        self.rangeLaser =     [0, 50]  # 0 to 50 mm
-        self.rangeLaserVout = [1, 5]   # 1V to 5V
-        self.offsetLaser =    1                                                                    # 50 mm range encoded
-        self.scaleLaser =     self.rangeLaser[1] / (self.rangeLaserVout[1]-self.rangeLaserVout[0]) # between 1V and 5V
-        '''
         # Circular buffers
         self.circBuffEpoch = 8000 # ms
         self.circBuffSamps = int(round( (self.circBuffEpoch/1000) * self.airt))
@@ -86,16 +96,16 @@ class DAQCallbackTask(Task):
         self.StartTask()
         # self.ReadAnalogF64(self.DAQBufferSize,self.timeout,DAQmx_Val_GroupByChannel,self.DAQbufferDataIn,self.DAQBufferSize*self.numChannels,byref(self.read),None)
 
-        # ANALOG OUTPUT (ao0: Servo control)
+        # ANALOG OUTPUT (Servo command)
         self.ao = Task()
         self.ao.servowritedata = numpy.arange(1, dtype=numpy.float64)*0
         self.ao.numsamples = 1
         self.ao.write = int32()
-        self.ao.CreateAOVoltageChan("dev5/ao0","Analog output",self.rangeServoSet[0],self.rangeServoSet[1],DAQmx_Val_Volts,None)
+        self.ao.CreateAOVoltageChan(vbaconfig.channels['aoChannelIDs'],"Analog output",self.scaleServoSet.signal[0],self.scaleServoSet.signal[1],DAQmx_Val_Volts,None)
         self.ao.StartTask()
         # self.ao.WriteAnalogF64(self.ao.numsamples,self.autostart,self.timeout,DAQmx_Val_GroupByChannel,self.ao.servowritedata+2.5,self.ao.write,None)
 
-        # DIGITAL INPUT (di0: Start signal from olfactometer)
+        # DIGITAL INPUT (Toggle closed / open loop mode)
         self.di = Task()
         self.di.fillMode = 1
         self.di.numSampsPerChan = 1
@@ -103,13 +113,13 @@ class DAQCallbackTask(Task):
         self.di.numBytesPerSamp = int32()
         self.di.readData = numpy.array([0], dtype=numpy.uint8)
         self.di.arraySizeInBytes = self.di.readData.__len__()
-        self.di.CreateDIChan("dev5/port0/line0","Digital input",DAQmx_Val_ChanForAllLines)
+        self.di.CreateDIChan(vbaconfig.channels['diChannelIDs'],"Digital input",DAQmx_Val_ChanForAllLines)
         self.di.StartTask()
         # self.di.ReadDigitalLines(self.di.numSampsPerChan, self.timeout, self.di.fillMode, self.di.readData, self.di.arraySizeInBytes, self.di.read, byref(self.di.numBytesPerSamp), None)
 
-        # DIGITAL OUTPUT (do0: Trigger state to loop closer)
+        # DIGITAL OUTPUT (Indicate ready state to stimulus control)
         self.do = Task()
-        self.do.CreateDOChan("dev5/port1/line0","Digital output",DAQmx_Val_ChanForAllLines)
+        self.do.CreateDOChan(vbaconfig.channels['doChannelIDs'],"Digital output",DAQmx_Val_ChanForAllLines)
         self.do.StartTask()
         # self.do.WriteDigitalScalarU32(1,1,0,None)
 
@@ -159,7 +169,7 @@ class DAQCallbackTask(Task):
         self.do.WriteDigitalScalarU32(1,1,state,None)
 
     def updateServoPosition(self,position):
-        scaledPosition = self.ao.servowritedata + (position/self.rangeServo[1])*self.rangeServoSet[1]
+        scaledPosition = self.ao.servowritedata + self.scaleServoSet.inversescale(position) #(position/self.rangeServo[1])*self.rangeServoSet[1]
         self.ao.WriteAnalogF64(self.ao.numsamples,self.autostart,self.timeout,DAQmx_Val_GroupByChannel,scaledPosition,self.ao.write,None)
 
     def clearDAQ(self):
@@ -280,15 +290,14 @@ class Main(QtGui.QMainWindow):
         indexLong = [self.circBufIndex*self.task.DAQBufferSize, self.circBufIndex*self.task.DAQBufferSize+self.task.DAQBufferSize]
 
         # Construct scaled circular buffer of analog and digital inputs (0:LASER, 1:FORCE, 2:SERVO, 3:ANALOGIN)
-        self.task.circBufferLaser[indexLong[0]:indexLong[1]] = (self.task.aiDataForSigProc[0,:] - 1)* (self.task.scaleLaser-1)
-        self.task.circBufferForce[indexLong[0]:indexLong[1]] = self.task.aiDataForSigProc[1,:] * self.task.scaleForce
-        self.task.circBufferServo[indexLong[0]:indexLong[1]] = self.task.rangeServo[1] - (self.task.aiDataForSigProc[2,:] * self.task.scaleServo)
+        self.task.circBufferLaser[indexLong[0]:indexLong[1]]    = self.task.scaleLaser.scale(self.task.aiDataForSigProc[0,:])
+        self.task.circBufferForce[indexLong[0]:indexLong[1]]    = self.task.scaleForce.scale(self.task.aiDataForSigProc[1,:])
+        self.task.circBufferServo[indexLong[0]:indexLong[1]]    = self.task.scaleServo.actual[1] - self.task.scaleServo.scale(self.task.aiDataForSigProc[2,:])
         self.task.circBufferAnalogIn[indexLong[0]:indexLong[1]] = self.task.aiDataForSigProc[3,:]
         self.task.circBufferDI[self.circBufIndex] = self.task.vbafsm.CMDolfactometerSaysPull[1]
         # Construct circular buffer of thresholds
         self.task.circBufferLaserThreshold[self.circBufIndex] = self.usrPrms.laserThreshold
         self.task.circBufferForceThreshold[self.circBufIndex] = self.usrPrms.forceThreshold
-
         # Figure out whether animal is below position threshold (measured by laser)
         self.task.belowPositionThreshold = all(self.task.circBufferLaser[indexLong[0]:indexLong[1]] < self.usrPrms.laserThreshold)
         # Figure out whether animal has not moved for N seconds
