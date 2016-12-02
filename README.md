@@ -15,7 +15,7 @@ Requires:
     - dev5:ao0 servo control  (scaling in script for FIRGELLI L12-30-50-12-I)
     - dev5:di0 logical to disable closed loop mode during trial / enable closed loop mode during ITI
     - dev5:do0 logical to indicate conditions satisfied for trial initiation
-  - NI-DAQmx (see http://www.ni.com/getting-started/install-software/data-acquisition)
+  - NI-DAQmx available at http://www.ni.com/getting-started/install-software/data-acquisition
   - PyDAQmx available at https://pythonhosted.org/PyDAQmx/
   - PyQt4
   - transitions available at https://github.com/tyarkoni/transitions
