@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\All\Desktop\pyscript\eclipse\VBAcmd\VBAcmd.ui'
+# Form implementation generated from reading ui file 'C:\Users\All\Desktop\pyscript\eclipse\VBAcmd\UIdesign.ui'
 #
-# Created: Thu Dec 01 16:36:47 2016
+# Created: Fri Dec 02 10:56:47 2016
 #      by: PyQt4 UI code generator 4.9.6
 #
 # WARNING! All changes made in this file will be lost!
@@ -377,13 +377,3 @@ class Ui_MainWindow(object):
         self.tubeStateTextLabel.setText(_translate("MainWindow", "FSM state", None))
 
 from PyQt4 import Qwt5
-
-if __name__ == "__main__":
-    import sys
-    app = QtGui.QApplication(sys.argv)
-    MainWindow = QtGui.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
-

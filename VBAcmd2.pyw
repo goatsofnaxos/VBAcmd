@@ -7,22 +7,23 @@ v2 includes analog input
 
 from __future__ import division
 
-# Generate py code from .ui file. Runs in ~100ms, can comment out once development is finished
-from os import path
-from subprocess import Popen
-winFilepath = path.dirname(path.realpath(__file__))
-p = Popen('pyuic4 -x '+winFilepath+'\VBAcmd.ui -o '+winFilepath+'\window.pyw', shell=True)
-p.wait()
+# Change working directory, compile UI and load configuration
+from os import chdir, path
+from PyQt4 import uic
+curpath = path.dirname(path.realpath(__file__))
+chdir(curpath)
+uic.compileUiDir(curpath)
+LOAD CONFIGURATION HERE
 
 from PyQt4 import QtGui, QtCore, Qt
 import PyQt4.Qwt5 as Qwt
-from window import Ui_MainWindow
-import sys
+from UIdesign import Ui_MainWindow
 from VBAFSMthread3 import VBAFSMthread
 from PyDAQmx import *
-from time import sleep, time
+from time import time
 import numpy
 from ParamLoad import ParamLoad
+from Scaling import Scaling
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 NI-DAQmx callback class
@@ -49,14 +50,19 @@ class DAQCallbackTask(Task):
         self.read =           int32()
         self.totNumBuffers =  int(0)
         # Hardware ranges and scaling factors
+        ''' Now handled by config.py
+        self.offsetForce =    0
         self.scaleForce =     10
         self.rangeServo =     [0, 30]    # travel range   0 to 30 mm
         self.rangeServoVout = [0, 3.3]   # output signal  0 to 3.3 V
-        self.rangeServoSet =  [0.0, 5.0] # setting signal 0 to 5 V
-        self.scaleServo =     self.rangeServo[1] / self.rangeServoVout[1] # 30 mm range encoded between 0V and 3.3 V
+        self.offsetServo =    0                                           # 30 mm range encoded
+        self.scaleServo =     self.rangeServo[1] / self.rangeServoVout[1] # between 0V and 3.3 V
+        self.rangeServoSet =  [0.0, 5.0] # command range  0 to 5 V
         self.rangeLaser =     [0, 50]  # 0 to 50 mm
         self.rangeLaserVout = [1, 5]   # 1V to 5V
-        self.scaleLaser =     self.rangeLaser[1] / (self.rangeLaserVout[1]-self.rangeLaserVout[0]) # 50 mm range encoded between 1V and 5V
+        self.offsetLaser =    1                                                                    # 50 mm range encoded
+        self.scaleLaser =     self.rangeLaser[1] / (self.rangeLaserVout[1]-self.rangeLaserVout[0]) # between 1V and 5V
+        '''
         # Circular buffers
         self.circBuffEpoch = 8000 # ms
         self.circBuffSamps = int(round( (self.circBuffEpoch/1000) * self.airt))
