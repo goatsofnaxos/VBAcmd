@@ -1,6 +1,8 @@
 # VBAcmd
 Control software for Virtual Burrow Assay
 
+[a link](https://github.com/user/repo/blob/branch/other_file.md)
+
 Runs on Windows 7 Professional, Python 2.7.5 (WinPython distribution)
 
 Instructions:
