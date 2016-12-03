@@ -113,7 +113,7 @@
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_9">
           <item>
-           <widget class="QLabel" name="chartTitle_laserPosition_2">
+           <widget class="QLabel" name="chartTitle_AnalogInput">
             <property name="font">
              <font>
               <pointsize>12</pointsize>

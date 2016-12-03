@@ -37,29 +37,16 @@ class DAQCallbackTask(Task):
 
         Task.__init__(self)
 
-        # Load hardware configuration and previous paramaeters if extant
+        # Load hardware configuration and previous parameters if extant
         vbaconfig = VBAconfig()
         self.initialUsrPrms = initialUsrPrms
 
-        # Set up scaling
-        #self.offsetForce =    0
-        #self.scaleForce =     10
-        #self.rangeServo =     [0, 30]    # travel range   0 to 30 mm
-        #self.rangeServoVout = [0, 3.3]   # output signal  0 to 3.3 V
-        #self.offsetServo =    0                                           # 30 mm range encoded
-        #self.scaleServo =     self.rangeServo[1] / self.rangeServoVout[1] # between 0V and 3.3 V
-        #self.rangeServoSet =  [0.0, 5.0] # command range  0 to 5 V
-        #self.rangeLaser =     [0, 50]  # 0 to 50 mm
-        #self.rangeLaserVout = [1, 5]   # 1V to 5V
-        #self.offsetLaser =    1                                                                    # 50 mm range encoded
-        #self.scaleLaser =     self.rangeLaser[1] / (self.rangeLaserVout[1]-self.rangeLaserVout[0]) # between 1V and 5V
-
-
-        self.scaleLaser    = Scaling(vbaconfig.encoding['rangeLaser'],vbaconfig.encoding['rangeLaserVout'])
-        self.scaleForce    = Scaling(vbaconfig.encoding['rangeForce'],vbaconfig.encoding['rangeForceVout'])
-        self.scaleServo    = Scaling(vbaconfig.encoding['rangeServo'],vbaconfig.encoding['rangeServoVout'])
-        self.scaleServoSet = Scaling(vbaconfig.encoding['rangeServoSet'],vbaconfig.encoding['rangeServoSetVcmd'])
-
+        # Scaling
+        self.scaleLaser    = Scaling(vbaconfig.encoding['rangeLaser'],vbaconfig.encoding['rangeLaserVout'],vbaconfig.encoding['unitLaser'])
+        self.scaleForce    = Scaling(vbaconfig.encoding['rangeForce'],vbaconfig.encoding['rangeForceVout'],vbaconfig.encoding['unitForce'])
+        self.scaleServo    = Scaling(vbaconfig.encoding['rangeServo'],vbaconfig.encoding['rangeServoVout'],vbaconfig.encoding['unitServo'])
+        self.scaleServoSet = Scaling(vbaconfig.encoding['rangeServoSet'],vbaconfig.encoding['rangeServoSetVcmd'],vbaconfig.encoding['unitServoSet'])
+        self.scaleAI       = Scaling(vbaconfig.encoding['rangeAI'],vbaconfig.encoding['rangeAIVout'],vbaconfig.encoding['unitAI'])
 
         # ANALOG INPUT (Laser / Force / Servo position / Optional analog input)
         self.numChannels =    vbaconfig.channels['ainumchanels']
@@ -201,15 +188,15 @@ class Main(QtGui.QMainWindow):
         if self.usrPrms.loadedOldParams == 1:
             pass
         else:
-            self.usrPrms.laserThreshold = 30   # (mm)
-            self.usrPrms.forceThreshold = 3.5  # (g)
-            self.usrPrms.struggleWait = 4      # (s) amount of time to wait after animal done struggling
-            self.usrPrms.pullPosition = 10     # (mm)
-            self.usrPrms.slackPosition = 20    # (mm)
-            self.usrPrms.movementWait = 1      # (s) amount of time to wait to make sure animal not moving
-            self.usrPrms.servoWait = 2         # (s) amount of time to wait after servo moves before transitioning
-            self.usrPrms.aiRangeMax = 10       # (V)
-            self.usrPrms.aiRangeMin = -1       # (V)
+            self.usrPrms.laserThreshold = 21.5 # (mm)
+            self.usrPrms.forceThreshold = 6.5  # (g)
+            self.usrPrms.struggleWait = 1      # (s) amount of time to wait after animal done struggling
+            self.usrPrms.pullPosition = 2      # (mm)
+            self.usrPrms.slackPosition = 18    # (mm)
+            self.usrPrms.movementWait = 1.5    # (s) amount of time to wait to make sure animal not moving
+            self.usrPrms.servoWait = 1         # (s) amount of time to wait after servo moves before transitioning
+            self.usrPrms.aiRangeMax = 0.05     # (V)
+            self.usrPrms.aiRangeMin = -0.03    # (V)
         # Launch the UI
         QtGui.QMainWindow.__init__(self)
         self.ui = Ui_MainWindow()
@@ -222,8 +209,6 @@ class Main(QtGui.QMainWindow):
         self.ui.positionPlot.setCanvasBackground(Qt.Qt.white)
         self.ui.forcePlot.setCanvasBackground(Qt.Qt.white)
         self.ui.startSig.setStyleSheet("background-color: white;")
-        self.ui.chartTitle_servoPosition.setStyleSheet("color: red")
-        self.ui.chartTitle_laserPosition.setStyleSheet("color: blue")
         # Run mode parameters
         self.controlMode_manual = 1
         self.servoState_slackening = 1
@@ -274,6 +259,17 @@ class Main(QtGui.QMainWindow):
         self.laserCheckWindow = int(self.usrPrms.movementWait * self.task.airt)
         self.servoCheckWindow = int(self.usrPrms.servoWait * (self.task.airt/self.task.DAQBufferEpoch))
         self.updateDIstate()
+        # Set plot title text and appearance (also depends on DAQ initialization
+        AItitle    = 'Analog input (' + self.task.scaleAI.unit + ')'
+        laserTitle = 'Laser Position (' + self.task.scaleLaser.unit + ')'
+        servoTitle = 'Servo Position (' + self.task.scaleServo.unit + ')'
+        forceTitle = 'Force (' + self.task.scaleForce.unit + ')'
+        self.ui.chartTitle_AnalogInput.setText(AItitle)
+        self.ui.chartTitle_laserPosition.setText(laserTitle)
+        self.ui.chartTitle_servoPosition.setText(servoTitle)
+        self.ui.chartTitle_force.setText(forceTitle)
+        self.ui.chartTitle_servoPosition.setStyleSheet("color: red")
+        self.ui.chartTitle_laserPosition.setStyleSheet("color: blue")
 
     def sigProcess(self):
 
@@ -293,7 +289,7 @@ class Main(QtGui.QMainWindow):
         self.task.circBufferLaser[indexLong[0]:indexLong[1]]    = self.task.scaleLaser.sig2act(self.task.aiDataForSigProc[0,:])
         self.task.circBufferForce[indexLong[0]:indexLong[1]]    = self.task.scaleForce.sig2act(self.task.aiDataForSigProc[1,:])
         self.task.circBufferServo[indexLong[0]:indexLong[1]]    = self.task.scaleServo.actual[1] - self.task.scaleServo.sig2act(self.task.aiDataForSigProc[2,:])
-        self.task.circBufferAnalogIn[indexLong[0]:indexLong[1]] = self.task.aiDataForSigProc[3,:]
+        self.task.circBufferAnalogIn[indexLong[0]:indexLong[1]] = self.task.scaleAI.sig2act(self.task.aiDataForSigProc[3,:])
         self.task.circBufferDI[self.circBufIndex] = self.task.vbafsm.CMDolfactometerSaysPull[1]
         # Construct circular buffer of thresholds
         self.task.circBufferLaserThreshold[self.circBufIndex] = self.usrPrms.laserThreshold

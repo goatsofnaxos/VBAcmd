@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'C:\Users\All\Desktop\pyscript\eclipse\VBAcmd\UIdesign.ui'
 #
-# Created: Sat Dec 03 10:43:47 2016
+# Created: Sat Dec 03 12:32:35 2016
 #      by: PyQt4 UI code generator 4.9.6
 #
 # WARNING! All changes made in this file will be lost!
@@ -72,15 +72,15 @@ class Ui_MainWindow(object):
         self.verticalLayout_12.setObjectName(_fromUtf8("verticalLayout_12"))
         self.horizontalLayout_9 = QtGui.QHBoxLayout()
         self.horizontalLayout_9.setObjectName(_fromUtf8("horizontalLayout_9"))
-        self.chartTitle_laserPosition_2 = QtGui.QLabel(self.centralwidget)
+        self.chartTitle_AnalogInput = QtGui.QLabel(self.centralwidget)
         font = QtGui.QFont()
         font.setPointSize(12)
         font.setBold(False)
         font.setWeight(50)
-        self.chartTitle_laserPosition_2.setFont(font)
-        self.chartTitle_laserPosition_2.setAlignment(QtCore.Qt.AlignCenter)
-        self.chartTitle_laserPosition_2.setObjectName(_fromUtf8("chartTitle_laserPosition_2"))
-        self.horizontalLayout_9.addWidget(self.chartTitle_laserPosition_2)
+        self.chartTitle_AnalogInput.setFont(font)
+        self.chartTitle_AnalogInput.setAlignment(QtCore.Qt.AlignCenter)
+        self.chartTitle_AnalogInput.setObjectName(_fromUtf8("chartTitle_AnalogInput"))
+        self.horizontalLayout_9.addWidget(self.chartTitle_AnalogInput)
         self.verticalLayout_12.addLayout(self.horizontalLayout_9)
         self.analogInPlot = Qwt5.QwtPlot(self.centralwidget)
         self.analogInPlot.setMinimumSize(QtCore.QSize(300, 150))
@@ -357,7 +357,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "VBAcmd", None))
         self.label_8.setText(_translate("MainWindow", "RangeMax", None))
         self.label_9.setText(_translate("MainWindow", "RangeMin", None))
-        self.chartTitle_laserPosition_2.setText(_translate("MainWindow", "Analog input (V)", None))
+        self.chartTitle_AnalogInput.setText(_translate("MainWindow", "Analog input (V)", None))
         self.label.setText(_translate("MainWindow", "Laser θ", None))
         self.label_2.setText(_translate("MainWindow", "Laser wait (s)", None))
         self.label_4.setText(_translate("MainWindow", "Servo wait (s)", None))
