@@ -20,7 +20,7 @@ Requires:
     - dev5/port1/line0 logical to indicate conditions satisfied for trial initiation
   - NI-DAQmx available at http://www.ni.com/getting-started/install-software/data-acquisition
   - PyDAQmx available at https://pythonhosted.org/PyDAQmx/
-  - PyQt4
+  - PyQt4 available at https://www.riverbankcomputing.com/software/pyqt/download
   - transitions available at https://github.com/tyarkoni/transitions
   - ParamLoad and Scaling available at https://github.com/goatsofnaxos/lib  
 
