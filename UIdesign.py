@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'C:\Users\All\Desktop\pyscript\eclipse\VBAcmd\UIdesign.ui'
 #
-# Created: Fri Dec 02 16:41:13 2016
+# Created: Sat Dec 03 10:34:07 2016
 #      by: PyQt4 UI code generator 4.9.6
 #
 # WARNING! All changes made in this file will be lost!

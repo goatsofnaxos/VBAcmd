@@ -169,7 +169,7 @@ class DAQCallbackTask(Task):
         self.do.WriteDigitalScalarU32(1,1,state,None)
 
     def updateServoPosition(self,position):
-        scaledPosition = self.ao.servowritedata + self.scaleServoSet.inversescale(position) #(position/self.rangeServo[1])*self.rangeServoSet[1]
+        scaledPosition = self.ao.servowritedata + self.scaleServoSet.act2sig(position) #(position/self.rangeServo[1])*self.rangeServoSet[1]
         self.ao.WriteAnalogF64(self.ao.numsamples,self.autostart,self.timeout,DAQmx_Val_GroupByChannel,scaledPosition,self.ao.write,None)
 
     def clearDAQ(self):
@@ -290,9 +290,9 @@ class Main(QtGui.QMainWindow):
         indexLong = [self.circBufIndex*self.task.DAQBufferSize, self.circBufIndex*self.task.DAQBufferSize+self.task.DAQBufferSize]
 
         # Construct scaled circular buffer of analog and digital inputs (0:LASER, 1:FORCE, 2:SERVO, 3:ANALOGIN)
-        self.task.circBufferLaser[indexLong[0]:indexLong[1]]    = self.task.scaleLaser.scale(self.task.aiDataForSigProc[0,:])
-        self.task.circBufferForce[indexLong[0]:indexLong[1]]    = self.task.scaleForce.scale(self.task.aiDataForSigProc[1,:])
-        self.task.circBufferServo[indexLong[0]:indexLong[1]]    = self.task.scaleServo.actual[1] - self.task.scaleServo.scale(self.task.aiDataForSigProc[2,:])
+        self.task.circBufferLaser[indexLong[0]:indexLong[1]]    = self.task.scaleLaser.sig2act(self.task.aiDataForSigProc[0,:])
+        self.task.circBufferForce[indexLong[0]:indexLong[1]]    = self.task.scaleForce.sig2act(self.task.aiDataForSigProc[1,:])
+        self.task.circBufferServo[indexLong[0]:indexLong[1]]    = self.task.scaleServo.actual[1] - self.task.scaleServo.sig2act(self.task.aiDataForSigProc[2,:])
         self.task.circBufferAnalogIn[indexLong[0]:indexLong[1]] = self.task.aiDataForSigProc[3,:]
         self.task.circBufferDI[self.circBufIndex] = self.task.vbafsm.CMDolfactometerSaysPull[1]
         # Construct circular buffer of thresholds
