@@ -1,8 +1,6 @@
 # VBAcmd
 Control software for Virtual Burrow Assay
 
-[a link](https://github.com/user/repo/blob/branch/other_file.md)
-
 Runs on Windows 7 Professional, Python 2.7.5 (WinPython distribution)
 
 Instructions:
@@ -12,7 +10,7 @@ Instructions:
 
 Requires:
   - Virtual Burrow Assay
-  - NI card with analog and digital in/out (e.g. USB-6008 http://sine.ni.com/nips/cds/view/p/lang/en/nid/201986). Default configuration:
+  - National Instruments card with analog and digital in/out (e.g.  [USB-6008](http://sine.ni.com/nips/cds/view/p/lang/en/nid/201986)). Default configuration:
     - dev5:ai0 laser sensor   (scaling for MICRO-EPSILON ILD1302-50)
     - dev5:ai1 force sensor   (scaling for FUTEK FSH02664 load cell with FUTEK QSH00602 signal conditioner in +/-5 VDC mode)
     - dev5:ai2 servo position (scaling for FIRGELLI L12-30-50-12-I)
