@@ -1,3 +1,4 @@
 VBAconfig.py
 VBAconfig.pyc
 !VBAconfig.py.template
+*.pyc
