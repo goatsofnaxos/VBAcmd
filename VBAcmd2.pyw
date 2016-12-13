@@ -301,9 +301,8 @@ class Main(QtGui.QMainWindow):
         self.task.belowPositionThreshold = all(self.task.circBufferLaser[indexLong[0]:indexLong[1]] < self.usrPrms.laserThreshold)
         # Figure out whether animal has not moved for N seconds
         circBufferLaserRolled = numpy.roll(self.task.circBufferLaser,-(indexLong[1]))
-        rescentSTD = numpy.std(circBufferLaserRolled[-self.laserCheckWindow:]) * 100
-        self.ui.laserSDtext_label.setText("{:.2f}".format(rescentSTD))
-        self.task.animalNotMovedInNSeconds = all(circBufferLaserRolled[-self.laserCheckWindow:] < self.usrPrms.laserThreshold) and rescentSTD < self.usrPrms.laserSDThreshold
+        self.rescentSTD = numpy.std(circBufferLaserRolled[-self.laserCheckWindow:]) * 100
+        self.task.animalNotMovedInNSeconds = all(circBufferLaserRolled[-self.laserCheckWindow:] < self.usrPrms.laserThreshold) and self.rescentSTD < self.usrPrms.laserSDThreshold
         # Figure out whether animal has not been struggling for N seconds
         circBufferForceRolled = numpy.roll(self.task.circBufferForce,-(indexLong[1]))
         self.task.animalNotStruggledInNSeconds = all(circBufferForceRolled[-self.forceCheckWindow:] < self.usrPrms.forceThreshold)
@@ -389,6 +388,13 @@ class Main(QtGui.QMainWindow):
         self.ui.forcePlot.replot()
         self.curveForce.detach()
         self.curveForceThreshold.detach()
+
+        # Update STD text
+        self.ui.laserSDtext_label.setText("{:.2f}".format(self.rescentSTD))
+        if self.rescentSTD < self.usrPrms.laserSDThreshold:
+            self.ui.laserSDtext_label.setStyleSheet('color: red; font-weight: bold')
+        else:
+            self.ui.laserSDtext_label.setStyleSheet('color: black')
 
     def updateDIstate(self):
         if self.task.vbafsm.CMDolfactometerSaysPull[1] and not self.controlMode_manual:

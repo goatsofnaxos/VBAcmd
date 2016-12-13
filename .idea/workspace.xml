@@ -27,8 +27,8 @@
       <file leaf-file-name="VBAcmd2.pyw" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/VBAcmd2.pyw">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44285715" vertical-offset="3348" max-vertical-offset="8653">
-              <caret line="217" column="33" selection-start-line="217" selection-start-column="33" selection-end-line="217" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.6736215" vertical-offset="6246" max-vertical-offset="8755">
+              <caret line="394" column="64" selection-start-line="394" selection-start-column="64" selection-end-line="394" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -89,10 +89,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="243" />
-    <option name="y" value="33" />
-    <option name="width" value="1349" />
-    <option name="height" value="942" />
+    <option name="x" value="71" />
+    <option name="y" value="49" />
+    <option name="width" value="1361" />
+    <option name="height" value="872" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Default">
@@ -523,7 +523,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="243" y="33" width="1349" height="942" extended-state="0" />
+    <frame x="71" y="49" width="1361" height="872" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -533,8 +533,8 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43454346" sideWeight="0.49934125" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.2750275" sideWeight="0.50065875" order="2" side_tool="true" content_ui="tabs" x="604" y="229" width="820" height="581" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23798627" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.2750275" sideWeight="0.50065875" order="2" side_tool="true" content_ui="tabs" x="-911" y="34" width="820" height="581" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23582767" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.330033" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -953,8 +953,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/VBAcmd2.pyw">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44285715" vertical-offset="3348" max-vertical-offset="8653">
-          <caret line="217" column="33" selection-start-line="217" selection-start-column="33" selection-end-line="217" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.6736215" vertical-offset="6246" max-vertical-offset="8755">
+          <caret line="394" column="64" selection-start-line="394" selection-start-column="64" selection-end-line="394" selection-end-column="64" />
           <folding />
         </state>
       </provider>
