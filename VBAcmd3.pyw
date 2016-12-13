@@ -215,6 +215,7 @@ class Main(QtGui.QMainWindow):
         self.servoState_slackening = 1
         self.outputTriggerHigh = 0
         self.timer = 0
+        self.nojiggle = False
         # Set default user values
         self.ui.laserThresholdDoubleSpinBox.setValue(self.usrPrms.laserThreshold)
         self.ui.laserWaitTimeDoubleSpinBox.setValue(self.usrPrms.movementWait)
@@ -278,10 +279,15 @@ class Main(QtGui.QMainWindow):
 
         execTimingStart = time()
 
-        # Check if VBAFSM is in launch state and if so, update the trigger on D.O.
-        if self.outputTriggerHigh != self.task.vbafsm.CMDtriggerHigh:
-            self.outputTriggerHigh = self.task.vbafsm.CMDtriggerHigh
-            self.task.updateOutputTrigger(self.outputTriggerHigh)
+        # Check if VBAFSM is in launch state and if so, update the trigger on D.O. (except if jiggling)
+        if not self.nojiggle:
+            if self.outputTriggerHigh > 0:
+                self.outputTriggerHigh = 0
+                self.task.updateOutputTrigger(self.outputTriggerHigh)
+        else:
+            if self.outputTriggerHigh != self.task.vbafsm.CMDtriggerHigh:
+                self.outputTriggerHigh = self.task.vbafsm.CMDtriggerHigh
+                self.task.updateOutputTrigger(self.outputTriggerHigh)
 
         # Set up indexing to move AI and DI to circular buffer
         if self.circBufIndex >= self.task.circBufferDI.size:
@@ -302,7 +308,8 @@ class Main(QtGui.QMainWindow):
         # Figure out whether animal has not moved for N seconds
         circBufferLaserRolled = numpy.roll(self.task.circBufferLaser,-(indexLong[1]))
         self.rescentSTD = numpy.std(circBufferLaserRolled[-self.laserCheckWindow:]) * 100
-        self.task.animalNotMovedInNSeconds = all(circBufferLaserRolled[-self.laserCheckWindow:] < self.usrPrms.laserThreshold) and self.rescentSTD < self.usrPrms.laserSDThreshold
+        self.nojiggle = self.rescentSTD < self.usrPrms.laserSDThreshold
+        self.task.animalNotMovedInNSeconds = all(circBufferLaserRolled[-self.laserCheckWindow:] < self.usrPrms.laserThreshold) and self.nojiggle
         # Figure out whether animal has not been struggling for N seconds
         circBufferForceRolled = numpy.roll(self.task.circBufferForce,-(indexLong[1]))
         self.task.animalNotStruggledInNSeconds = all(circBufferForceRolled[-self.forceCheckWindow:] < self.usrPrms.forceThreshold)
@@ -391,7 +398,7 @@ class Main(QtGui.QMainWindow):
 
         # Update STD text
         self.ui.laserSDtext_label.setText("{:.2f}".format(self.rescentSTD))
-        if self.rescentSTD < self.usrPrms.laserSDThreshold:
+        if self.nojiggle:
             self.ui.laserSDtext_label.setStyleSheet('color: black')
         else:
             self.ui.laserSDtext_label.setStyleSheet('color: red; font-weight: bold')

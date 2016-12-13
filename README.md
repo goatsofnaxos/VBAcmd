@@ -6,7 +6,7 @@ Runs on Windows 7 Professional, Python 2.7.5 (WinPython distribution)
 Instructions:
   - Rename VBAconfig.py.template to VBAconfig.py 
   - If necessary correct DAQ and scaling parameters in the new VBAconfig.py file (git pull will not overwrite your local VBAconfig.py file)
-  - Run VBAcmd2.pyw
+  - Run VBAcmd3.pyw
 
 Requires:
   - Virtual Burrow Assay
