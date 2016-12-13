@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'C:\Users\All\Desktop\pyscript\eclipse\VBAcmd\UIdesign.ui'
 #
-# Created: Tue Dec 06 09:49:00 2016
+# Created: Mon Dec 12 19:42:14 2016
 #      by: PyQt4 UI code generator 4.9.6
 #
 # WARNING! All changes made in this file will be lost!
@@ -26,7 +26,7 @@ except AttributeError:
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
-        MainWindow.resize(604, 715)
+        MainWindow.resize(604, 779)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Minimum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -106,6 +106,21 @@ class Ui_MainWindow(object):
         self.laserThresholdDoubleSpinBox.setSingleStep(1.0)
         self.laserThresholdDoubleSpinBox.setObjectName(_fromUtf8("laserThresholdDoubleSpinBox"))
         self.verticalLayout.addWidget(self.laserThresholdDoubleSpinBox)
+        self.label_10 = QtGui.QLabel(self.centralwidget)
+        self.label_10.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_10.setObjectName(_fromUtf8("label_10"))
+        self.verticalLayout.addWidget(self.label_10)
+        self.laserSDThresholdDoubleSpinBox = QtGui.QDoubleSpinBox(self.centralwidget)
+        self.laserSDThresholdDoubleSpinBox.setDecimals(1)
+        self.laserSDThresholdDoubleSpinBox.setMinimum(0.0)
+        self.laserSDThresholdDoubleSpinBox.setMaximum(10000.0)
+        self.laserSDThresholdDoubleSpinBox.setSingleStep(0.1)
+        self.laserSDThresholdDoubleSpinBox.setObjectName(_fromUtf8("laserSDThresholdDoubleSpinBox"))
+        self.verticalLayout.addWidget(self.laserSDThresholdDoubleSpinBox)
+        self.laserSDtext_label = QtGui.QLabel(self.centralwidget)
+        self.laserSDtext_label.setAlignment(QtCore.Qt.AlignCenter)
+        self.laserSDtext_label.setObjectName(_fromUtf8("laserSDtext_label"))
+        self.verticalLayout.addWidget(self.laserSDtext_label)
         spacerItem3 = QtGui.QSpacerItem(20, 20, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Fixed)
         self.verticalLayout.addItem(spacerItem3)
         self.label_2 = QtGui.QLabel(self.centralwidget)
@@ -359,6 +374,8 @@ class Ui_MainWindow(object):
         self.label_9.setText(_translate("MainWindow", "RangeMin", None))
         self.chartTitle_AnalogInput.setText(_translate("MainWindow", "Analog input (V)", None))
         self.label.setText(_translate("MainWindow", "Laser θ", None))
+        self.label_10.setText(_translate("MainWindow", "Laser SD θ", None))
+        self.laserSDtext_label.setText(_translate("MainWindow", "Laser Text", None))
         self.label_2.setText(_translate("MainWindow", "Laser wait (s)", None))
         self.label_4.setText(_translate("MainWindow", "Servo wait (s)", None))
         self.chartTitle_laserPosition.setText(_translate("MainWindow", "Laser position (mm)", None))

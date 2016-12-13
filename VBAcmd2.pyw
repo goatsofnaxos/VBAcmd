@@ -20,7 +20,7 @@ import PyQt4.Qwt5 as Qwt
 from UIdesign import Ui_MainWindow
 from VBAFSMthread3 import VBAFSMthread
 from PyDAQmx import *
-from time import time
+from time import time, strftime
 import numpy
 from ParamLoad import ParamLoad
 from VBAconfig import VBAconfig
@@ -197,6 +197,7 @@ class Main(QtGui.QMainWindow):
             self.usrPrms.servoWait = 1         # (s) amount of time to wait after servo moves before transitioning
             self.usrPrms.aiRangeMax = 0.05     # (V)
             self.usrPrms.aiRangeMin = -0.03    # (V)
+            self.usrPrms.laserSDThreshold = 3  # ([STD of mm] * 100)
         # Launch the UI
         QtGui.QMainWindow.__init__(self)
         self.ui = Ui_MainWindow()
@@ -226,6 +227,7 @@ class Main(QtGui.QMainWindow):
         self.ui.aiRangeMinSpinBox.setValue(self.usrPrms.aiRangeMin)
         self.ui.manualRadioButton.toggle()
         self.ui.slackPositionRadioButton.toggle()
+        self.ui.laserSDThresholdDoubleSpinBox.setValue(self.usrPrms.laserSDThreshold)
         # Set plotting parameters
         self.circBufLaserIndex = 0
         self.circBufForceIndex = 0
@@ -243,6 +245,7 @@ class Main(QtGui.QMainWindow):
         self.ui.aiRangeMinSpinBox.valueChanged.connect(self.aiRangeMinSpinBox_changed)
         self.ui.manualRadioButton.toggled.connect(self.manualRadioButton_toggled)
         self.ui.slackPositionRadioButton.toggled.connect(self.slackPositionRadioButton_toggled)
+        self.ui.laserSDThresholdDoubleSpinBox.valueChanged.connect(self.laserSDThreshold_changed)
         # Set up event signals
         app.aboutToQuit.connect(self.shutDown)
         self.writeSignal.connect(self.sigProcess)
@@ -298,7 +301,9 @@ class Main(QtGui.QMainWindow):
         self.task.belowPositionThreshold = all(self.task.circBufferLaser[indexLong[0]:indexLong[1]] < self.usrPrms.laserThreshold)
         # Figure out whether animal has not moved for N seconds
         circBufferLaserRolled = numpy.roll(self.task.circBufferLaser,-(indexLong[1]))
-        self.task.animalNotMovedInNSeconds = all(circBufferLaserRolled[-self.laserCheckWindow:] < self.usrPrms.laserThreshold)
+        rescentSTD = numpy.std(circBufferLaserRolled[-self.laserCheckWindow:]) * 100
+        self.ui.laserSDtext_label.setText("{:.2f}".format(rescentSTD))
+        self.task.animalNotMovedInNSeconds = all(circBufferLaserRolled[-self.laserCheckWindow:] < self.usrPrms.laserThreshold) and rescentSTD < self.usrPrms.laserSDThreshold
         # Figure out whether animal has not been struggling for N seconds
         circBufferForceRolled = numpy.roll(self.task.circBufferForce,-(indexLong[1]))
         self.task.animalNotStruggledInNSeconds = all(circBufferForceRolled[-self.forceCheckWindow:] < self.usrPrms.forceThreshold)
@@ -326,7 +331,7 @@ class Main(QtGui.QMainWindow):
         # Make sure signal processing isn't taking too long relative to acquisition buffer length
         execTiming = (time()-execTimingStart) * 1000
         if (self.task.DAQBufferEpoch/2) < execTiming:
-            print 'Warning: sigProcess is taking', execTiming, 'ms ; DAQBufferEpoch is set to', self.task.DAQBufferEpoch, 'ms'
+            print 'Warning: sigProcess is taking', execTiming, 'ms ; DAQBufferEpoch is set to', self.task.DAQBufferEpoch, 'ms', strftime("%Y-%m-%d %H:%M:%S")
 
     def plotTraces(self):
 
@@ -485,6 +490,8 @@ class Main(QtGui.QMainWindow):
         if self.ui.slackPositionRadioButton.isChecked(): self.servoState_slackening = 1
         else: self.servoState_slackening = 0
         self.updateState()
+    def laserSDThreshold_changed(self):
+        self.usrPrms.laserSDThreshold = self.ui.laserSDThresholdDoubleSpinBox.value()
 
 
 
