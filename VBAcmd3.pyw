@@ -1,8 +1,8 @@
 '''
 Started July 21, 2015
 @author: Carl Schoonover
-GUI and control of virtual burrow assay v. 3+
-v2 includes analog input
+GUI and control of virtual burrow assay v. 4+
+now includes analog input
 '''
 
 from __future__ import division
@@ -13,7 +13,7 @@ from PyQt4 import uic
 curpath = path.dirname(path.realpath(__file__))
 chdir(curpath)
 uic.compileUiDir(curpath)
-#LOAD CONFIGURATION HERE
+from VBAconfig import VBAconfig
 
 from PyQt4 import QtGui, QtCore, Qt
 import PyQt4.Qwt5 as Qwt
@@ -23,7 +23,6 @@ from PyDAQmx import *
 from time import time, strftime
 import numpy
 from ParamLoad import ParamLoad
-from VBAconfig import VBAconfig
 from Scaling import Scaling
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
@@ -216,6 +215,7 @@ class Main(QtGui.QMainWindow):
         self.outputTriggerHigh = 0
         self.timer = 0
         self.nojiggle = False
+        self.noyank = False
         # Set default user values
         self.ui.laserThresholdDoubleSpinBox.setValue(self.usrPrms.laserThreshold)
         self.ui.laserWaitTimeDoubleSpinBox.setValue(self.usrPrms.movementWait)
@@ -255,6 +255,7 @@ class Main(QtGui.QMainWindow):
         self.updateStateSignal.connect(self.updateState)
         # Create the DAQ object
         self.task = DAQCallbackTask(self.usrPrms)
+        self.task.animalNotStruggledInNSeconds = False
         # Set some variables and UI values that depend on DAQ initialization
         self.ui.forceTimeBeforeSlackDoubleSpinBox.setMaximum(self.task.circBuffEpoch/1000)
         self.ui.laserWaitTimeDoubleSpinBox.setMaximum(self.task.circBuffEpoch/1000)
@@ -279,8 +280,8 @@ class Main(QtGui.QMainWindow):
 
         execTimingStart = time()
 
-        # Check if VBAFSM is in launch state and if so, update the trigger on D.O. (except if jiggling)
-        if not self.nojiggle:
+        # Check if VBAFSM is in launch state and if so, update the trigger on D.O. (except if jiggling or yanking on the tether)
+        if not (self.nojiggle and self.task.animalNotStruggledInNSeconds):
             if self.outputTriggerHigh > 0:
                 self.outputTriggerHigh = 0
                 self.task.updateOutputTrigger(self.outputTriggerHigh)
@@ -320,9 +321,9 @@ class Main(QtGui.QMainWindow):
         timeLag = ((time()-self.timer)*1000 > self.task.DAQBufferEpoch*3) # Need to wait a couple of updates before servo signal derivative changes
         self.task.servoStationary = all(circBufferServoSlopeRolled[-self.servoCheckWindow:] < 4.5) and timeLag
         # Set the trigger variables for the finite state machine
-        self.task.vbafsm.CMDdoneStruggling = self.task.servoStationary and self.task.animalNotStruggledInNSeconds # CONDITIONS: (1) Servo hasn't moved for N seconds; (2) Animal hasn't crossed force threshold for N seconds
-        self.task.vbafsm.CMDanimalEscaped = not self.task.belowPositionThreshold                                  # CONDITIONS: (1) Laser says animal moved
-        self.task.vbafsm.CMDanimalReady = self.task.servoStationary and self.task.animalNotMovedInNSeconds        # CONDITIONS: (1) Servo hasn't moved for N seconds; (2) Animal hasn't crossed laser threshold for N seconds; (3) Animal hasn't moved more than Laser SD theta for N seconds
+        self.task.vbafsm.CMDdoneStruggling = self.task.servoStationary and self.task.animalNotStruggledInNSeconds                                      # CONDITIONS: (1) Servo hasn't moved for N seconds; (2) Animal hasn't crossed force threshold for N seconds
+        self.task.vbafsm.CMDanimalEscaped = not self.task.belowPositionThreshold                                                                       # CONDITIONS: (1) Laser says animal moved
+        self.task.vbafsm.CMDanimalReady = self.task.servoStationary and self.task.animalNotMovedInNSeconds and self.task.animalNotStruggledInNSeconds  # CONDITIONS: (1) Servo hasn't moved for N seconds; (2) Animal hasn't crossed laser threshold for N seconds; (3) Animal hasn't moved more than Laser SD theta for N seconds; (4) Animal hasn't crossed force threshold for N seconds
         ''' # FSM AUTOCYCLE
         self.task.vbafsm.CMDdoneStruggling =  numpy.random.random_sample() > 0.9
         self.task.vbafsm.CMDanimalEscaped = numpy.random.random_sample() > 0.9
@@ -403,6 +404,13 @@ class Main(QtGui.QMainWindow):
         else:
             self.ui.laserSDtext_label.setStyleSheet('color: red; font-weight: bold')
 
+        # Update trigger state text
+        if self.outputTriggerHigh > 0:
+            self.ui.outTrigTextLabel.setText(' X ')
+            self.ui.outTrigTextLabel.setStyleSheet('color: red; background-color: grey')
+        else:
+            self.ui.outTrigTextLabel.setText('')
+
     def updateDIstate(self):
         if self.task.vbafsm.CMDolfactometerSaysPull[1] and not self.controlMode_manual:
             self.ui.startSig.setText('OLFACTOMETER SAYS PULL')
@@ -435,7 +443,7 @@ class Main(QtGui.QMainWindow):
                 self.task.updateServoPosition(self.ui.slackPositionDoubleSpinBox.value()) # Set servo position to slack
             elif self.task.VBAFSMstate[1] == 'ready':
                 self.ui.tubeStateTextLabel.setText('READY TO LAUNCH')
-                self.ui.tubeStateTextLabel.setStyleSheet('color: darkMagenta')
+                self.ui.tubeStateTextLabel.setStyleSheet('color: darkMagenta;')
             elif self.task.VBAFSMstate[1] == 'launching':
                 self.ui.tubeStateTextLabel.setText('!!! LAUNCHING !!!')
                 self.ui.tubeStateTextLabel.setStyleSheet('color: red')

@@ -129,7 +129,7 @@ class VBAFSMthread(Thread):
     def animal_ready(self):
         sleep(self.rt/2)
         if self.doAutoCycle: condition = random.random_sample() > 0.8
-        else: condition = self.CMDanimalReady   # CONDITIONS: (1) Servo done slackening; (2) Animal hasn't moved for N seconds
+        else: condition = self.CMDanimalReady   # CONDITIONS: (1) Servo hasn't moved for N seconds; (2) Animal hasn't crossed laser threshold for N seconds; (3) Animal hasn't moved more than Laser SD theta for N seconds; (4) Animal hasn't crossed force threshold for N seconds
         if self.doPrint: print '## ANIMAL READY? ##', condition
         return condition
 
