@@ -704,6 +704,23 @@
            </spacer>
           </item>
           <item>
+           <widget class="QLabel" name="outTrigTextLabel2">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>_</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QLabel" name="tubeStateTextLabel">
             <property name="font">
              <font>
@@ -721,7 +738,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="outTrigTextLabel">
+           <widget class="QLabel" name="outTrigTextLabel1">
             <property name="font">
              <font>
               <pointsize>12</pointsize>

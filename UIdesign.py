@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'C:\Users\All\Desktop\pyscript\eclipse\VBAcmd\UIdesign.ui'
 #
-# Created: Tue Jan 03 18:11:12 2017
+# Created: Thu Jan 05 11:01:37 2017
 #      by: PyQt4 UI code generator 4.9.6
 #
 # WARNING! All changes made in this file will be lost!
@@ -326,6 +326,15 @@ class Ui_MainWindow(object):
         self.horizontalLayout_6.setObjectName(_fromUtf8("horizontalLayout_6"))
         spacerItem8 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
         self.horizontalLayout_6.addItem(spacerItem8)
+        self.outTrigTextLabel2 = QtGui.QLabel(self.centralwidget)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.outTrigTextLabel2.setFont(font)
+        self.outTrigTextLabel2.setAlignment(QtCore.Qt.AlignCenter)
+        self.outTrigTextLabel2.setObjectName(_fromUtf8("outTrigTextLabel2"))
+        self.horizontalLayout_6.addWidget(self.outTrigTextLabel2)
         self.tubeStateTextLabel = QtGui.QLabel(self.centralwidget)
         font = QtGui.QFont()
         font.setPointSize(12)
@@ -335,15 +344,15 @@ class Ui_MainWindow(object):
         self.tubeStateTextLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.tubeStateTextLabel.setObjectName(_fromUtf8("tubeStateTextLabel"))
         self.horizontalLayout_6.addWidget(self.tubeStateTextLabel)
-        self.outTrigTextLabel = QtGui.QLabel(self.centralwidget)
+        self.outTrigTextLabel1 = QtGui.QLabel(self.centralwidget)
         font = QtGui.QFont()
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
-        self.outTrigTextLabel.setFont(font)
-        self.outTrigTextLabel.setAlignment(QtCore.Qt.AlignCenter)
-        self.outTrigTextLabel.setObjectName(_fromUtf8("outTrigTextLabel"))
-        self.horizontalLayout_6.addWidget(self.outTrigTextLabel)
+        self.outTrigTextLabel1.setFont(font)
+        self.outTrigTextLabel1.setAlignment(QtCore.Qt.AlignCenter)
+        self.outTrigTextLabel1.setObjectName(_fromUtf8("outTrigTextLabel1"))
+        self.horizontalLayout_6.addWidget(self.outTrigTextLabel1)
         spacerItem9 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
         self.horizontalLayout_6.addItem(spacerItem9)
         self.verticalLayout_4.addLayout(self.horizontalLayout_6)
@@ -400,7 +409,8 @@ class Ui_MainWindow(object):
         self.pullPositionRadioButton.setText(_translate("MainWindow", "Pulling", None))
         self.label_7.setText(_translate("MainWindow", "Slack position", None))
         self.label_6.setText(_translate("MainWindow", "Pull position", None))
+        self.outTrigTextLabel2.setText(_translate("MainWindow", "_", None))
         self.tubeStateTextLabel.setText(_translate("MainWindow", "FSM state", None))
-        self.outTrigTextLabel.setText(_translate("MainWindow", "_", None))
+        self.outTrigTextLabel1.setText(_translate("MainWindow", "_", None))
 
 from PyQt4 import Qwt5

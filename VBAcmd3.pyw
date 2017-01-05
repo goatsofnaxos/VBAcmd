@@ -406,10 +406,13 @@ class Main(QtGui.QMainWindow):
 
         # Update trigger state text
         if self.outputTriggerHigh > 0:
-            self.ui.outTrigTextLabel.setText(' X ')
-            self.ui.outTrigTextLabel.setStyleSheet('color: red; background-color: grey')
+            self.ui.outTrigTextLabel1.setText(' X ')
+            self.ui.outTrigTextLabel1.setStyleSheet('color: red; background-color: grey')
+            self.ui.outTrigTextLabel2.setText(' X ')
+            self.ui.outTrigTextLabel2.setStyleSheet('color: red; background-color: grey')
         else:
-            self.ui.outTrigTextLabel.setText('')
+            self.ui.outTrigTextLabel1.setText('')
+            self.ui.outTrigTextLabel2.setText('')
 
     def updateDIstate(self):
         if self.task.vbafsm.CMDolfactometerSaysPull[1] and not self.controlMode_manual:
