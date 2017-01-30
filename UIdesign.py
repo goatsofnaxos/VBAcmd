@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'C:\Users\All\Desktop\pyscript\eclipse\VBAcmd\UIdesign.ui'
 #
-# Created: Mon Jan 16 09:54:09 2017
+# Created: Tue Jan 24 09:43:31 2017
 #      by: PyQt4 UI code generator 4.9.6
 #
 # WARNING! All changes made in this file will be lost!
@@ -51,7 +51,7 @@ class Ui_MainWindow(object):
         self.aiRangeMaxSpinBox.setDecimals(2)
         self.aiRangeMaxSpinBox.setMinimum(-20.0)
         self.aiRangeMaxSpinBox.setMaximum(20.0)
-        self.aiRangeMaxSpinBox.setSingleStep(1.0)
+        self.aiRangeMaxSpinBox.setSingleStep(0.01)
         self.aiRangeMaxSpinBox.setObjectName(_fromUtf8("aiRangeMaxSpinBox"))
         self.verticalLayout_11.addWidget(self.aiRangeMaxSpinBox)
         self.label_9 = QtGui.QLabel(self.centralwidget)
@@ -62,7 +62,7 @@ class Ui_MainWindow(object):
         self.aiRangeMinSpinBox.setDecimals(2)
         self.aiRangeMinSpinBox.setMinimum(-20.0)
         self.aiRangeMinSpinBox.setMaximum(20.0)
-        self.aiRangeMinSpinBox.setSingleStep(1.0)
+        self.aiRangeMinSpinBox.setSingleStep(0.01)
         self.aiRangeMinSpinBox.setObjectName(_fromUtf8("aiRangeMinSpinBox"))
         self.verticalLayout_11.addWidget(self.aiRangeMinSpinBox)
         spacerItem1 = QtGui.QSpacerItem(20, 10, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
