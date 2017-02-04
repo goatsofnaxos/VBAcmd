@@ -1,5 +1,5 @@
 # VBAcmd
-Control software for Virtual Burrow Assay
+FSM-based control software for Virtual Burrow Assay
 
 Runs on Windows 7 Professional, Python 2.7.5 (WinPython distribution)
 
