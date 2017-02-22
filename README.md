@@ -13,9 +13,9 @@ Requires:
   - National Instruments card with analog and digital in/out (e.g.  [USB-6008](http://sine.ni.com/nips/cds/view/p/lang/en/nid/201986)). Default configuration in VBAconfig.py.template:
     - dev5:ai0 laser sensor   (scaling for MICRO-EPSILON ILD1302-50)
     - dev5:ai1 force sensor   (scaling for FUTEK FSH02664 load cell with FUTEK QSH00602 signal conditioner, +/-5 VDC output range)
-    - dev5:ai2 servo position (scaling for FIRGELLI L12-30-50-12-I)
+    - dev5:ai2 servo position (scaling for FIRGELLI L12-50-50-12-I)
     - dev5:ai3 optional analog in (no scaling)
-    - dev5:ao0 servo control  (scaling for FIRGELLI L12-30-50-12-I)
+    - dev5:ao0 servo control  (scaling for FIRGELLI L12-50-50-12-I)
     - dev5/port0/line0 logical in to disable closed loop mode during trial / enable closed loop mode during ITI
     - dev5/port1/line0 logical out to indicate conditions satisfied for trial initiation
   - NI-DAQmx available at http://www.ni.com/getting-started/install-software/data-acquisition
