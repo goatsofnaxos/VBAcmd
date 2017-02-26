@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'C:\Users\All\Desktop\pyscript\eclipse\VBAcmd\UIdesign.ui'
 #
-# Created: Tue Jan 24 09:43:31 2017
+# Created: Sat Feb 25 11:10:10 2017
 #      by: PyQt4 UI code generator 4.9.6
 #
 # WARNING! All changes made in this file will be lost!
@@ -103,7 +103,7 @@ class Ui_MainWindow(object):
         self.laserThresholdDoubleSpinBox.setDecimals(1)
         self.laserThresholdDoubleSpinBox.setMinimum(0.0)
         self.laserThresholdDoubleSpinBox.setMaximum(10000.0)
-        self.laserThresholdDoubleSpinBox.setSingleStep(1.0)
+        self.laserThresholdDoubleSpinBox.setSingleStep(0.5)
         self.laserThresholdDoubleSpinBox.setObjectName(_fromUtf8("laserThresholdDoubleSpinBox"))
         self.verticalLayout.addWidget(self.laserThresholdDoubleSpinBox)
         self.label_10 = QtGui.QLabel(self.centralwidget)
@@ -293,7 +293,7 @@ class Ui_MainWindow(object):
         self.slackPositionDoubleSpinBox = QtGui.QDoubleSpinBox(self.centralwidget)
         self.slackPositionDoubleSpinBox.setDecimals(1)
         self.slackPositionDoubleSpinBox.setMinimum(0.0)
-        self.slackPositionDoubleSpinBox.setMaximum(30.0)
+        self.slackPositionDoubleSpinBox.setMaximum(99.0)
         self.slackPositionDoubleSpinBox.setSingleStep(0.1)
         self.slackPositionDoubleSpinBox.setProperty("value", 0.0)
         self.slackPositionDoubleSpinBox.setObjectName(_fromUtf8("slackPositionDoubleSpinBox"))
@@ -306,7 +306,7 @@ class Ui_MainWindow(object):
         self.pullPositionDoubleSpinBox.setSizePolicy(sizePolicy)
         self.pullPositionDoubleSpinBox.setDecimals(1)
         self.pullPositionDoubleSpinBox.setMinimum(0.0)
-        self.pullPositionDoubleSpinBox.setMaximum(30.0)
+        self.pullPositionDoubleSpinBox.setMaximum(99.0)
         self.pullPositionDoubleSpinBox.setSingleStep(0.1)
         self.pullPositionDoubleSpinBox.setProperty("value", 0.0)
         self.pullPositionDoubleSpinBox.setObjectName(_fromUtf8("pullPositionDoubleSpinBox"))

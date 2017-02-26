@@ -15,11 +15,11 @@ class VBAconfig():
                          'doChannelIDs': 'dev5/port1/line0', # Indicate ready state to stimulus control
                          }
 
-        self.encoding = {'rangeServo':        [0, 30],     # measured range 0 to 30 mm        FIRGELLI
-                         'rangeServoVout':    [0, 3.3],    # output signal  0 to 3.3 V           L12-30-50-12-I
+        self.encoding = {'rangeServo':        [0, 50],     # measured range 0 to 50 mm        FIRGELLI
+                         'rangeServoVout':    [0, 3.3],    # output signal  0 to 3.3 V           L12-50-50-12-I
                          'unitServo':         'mm',
-                         'rangeServoSet':     [0, 30],     # travel range   0 to 30 mm        FIRGELLI
-                         'rangeServoSetVcmd': [0, 5],      # command signal 0 to 5 V             L12-30-50-12-I
+                         'rangeServoSet':     [0, 50],     # travel range   0 to 50 mm        FIRGELLI
+                         'rangeServoSetVcmd': [0, 5],      # command signal 0 to 5 V             L12-50-50-12-I
                          'unitServoSet':      'mm',
                          'rangeForce':        [-100, 100], # force range    -100 to 100 g     FUTEK
                          'rangeForceVout':    [-5, 5],     # output signal  -5 to +5 V           FSH02664 load cell with FUTEK QSH00602 signal conditioner in +/-5 VDC mode
