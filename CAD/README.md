@@ -26,4 +26,4 @@ From New Way Air Bearings:
 
 From Thorlabs or Newport:
 
-     Breadboard to assemble the electronics around the frictionless rail system, e.g. Thorlabs [MB1530/M](https://www.thorlabs.com/thorproduct.cfm?partnumber=MB1530/M), posts, post clamps, etc.
+     Breadboard to assemble the electronics around the frictionless rail system, e.g. Thorlabs [MB1530M](https://www.thorlabs.com/thorproduct.cfm?partnumber=MB1530/M), posts, post clamps, etc.
