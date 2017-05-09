@@ -9,7 +9,7 @@ Instructions:
   - Run VBAcmd3.pyw
 
 Requires:
-  - Virtual Burrow Assay (see [CAD] (https://github.com/goatsofnaxos/VBAcmd/tree/master/CAD) folder for design)
+  - Virtual Burrow Assay (see [CAD](https://github.com/goatsofnaxos/VBAcmd/tree/master/CAD) folder for design)
   - National Instruments card with analog and digital in/out (e.g.  [USB-6008](http://sine.ni.com/nips/cds/view/p/lang/en/nid/201986)). Default configuration in VBAconfig.py.template:
     - dev5:ai0 laser sensor   (scaling for MICRO-EPSILON ILD1302-50)
     - dev5:ai1 force sensor   (scaling for FUTEK FSH02664 load cell with FUTEK QSH00602 signal conditioner, +/-5 VDC output range)
