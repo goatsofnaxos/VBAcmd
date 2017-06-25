@@ -2,6 +2,7 @@ VBAconfig.py
 VBAconfig.pyc
 !VBAconfig.py.template
 *.pyc
+.idea/
 
 # Windows image file caches
 Thumbs.db
