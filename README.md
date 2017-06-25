@@ -30,4 +30,4 @@ We are not software engineers. This is likely to be buggy, inefficient and recal
 ![alt tag](https://raw.githubusercontent.com/goatsofnaxos/VBAcmd/master/FSM.png)
 
 ![alt tag](https://raw.githubusercontent.com/goatsofnaxos/VBAcmd/master/puffExample.gif)
-![alt tag](https://raw.githubusercontent.com/goatsofnaxos/VBAcmd/master/loomExample.gif)
+![alt tag](https://raw.githubusercontent.com/goatsofnaxos/VBAcmd/master/loomExample2.gif)
