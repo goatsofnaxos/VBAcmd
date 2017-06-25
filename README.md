@@ -26,8 +26,8 @@ Requires:
 
 We are not software engineers. This is likely to be buggy, inefficient and recalcitrant to distribution across different platforms--and so welcome any assistance.
 
-![alt tag](https://raw.githubusercontent.com/goatsofnaxos/VBAcmd/master/screengrab.png)
+![alt tag](https://raw.githubusercontent.com/goatsofnaxos/VBAcmd/master/screengrab2.png)
 ![alt tag](https://raw.githubusercontent.com/goatsofnaxos/VBAcmd/master/FSM.png)
 
-
-![alt tag](https://raw.githubusercontent.com/goatsofnaxos/VBAcmd/master/ezgif-3-2a09ccfc0f.gif)
+![alt tag](https://raw.githubusercontent.com/goatsofnaxos/VBAcmd/master/puffExample.gif)
+![alt tag](https://raw.githubusercontent.com/goatsofnaxos/VBAcmd/master/loomExample.gif)
