@@ -1,6 +1,8 @@
 # VBAcmd
 FSM-based control software for Virtual Burrow Assay
 
+© 2017 The Trustees of Columbia University in the City of New York. All Rights Reserved.
+
 Runs on Windows 7 Professional, Python 2.7.5 (WinPython distribution)
 
 Instructions:
