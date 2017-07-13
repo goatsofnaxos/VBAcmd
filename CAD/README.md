@@ -2,6 +2,7 @@
 
 CAD files for the frictionless rail system (Tanya Tabachnik, Advanced Instrumentation, ZMBBI, Columbia University)
 
+© 2017 The Trustees of Columbia University in the City of New York. All Rights Reserved.
 
 From New Way Air Bearings:
 

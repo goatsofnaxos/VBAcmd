@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+# © 2017 The Trustees of Columbia University in the City of New York. All Rights Reserved.
+
 # Form implementation generated from reading ui file 'C:\Users\All\Desktop\pyscript\eclipse\VBAcmd\VBAcmd.ui'
 #
 # Created: Sat Jul 08 12:14:01 2017

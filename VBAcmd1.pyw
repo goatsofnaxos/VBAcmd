@@ -1,4 +1,7 @@
 '''
+
+© 2017 The Trustees of Columbia University in the City of New York. All Rights Reserved.
+
 Started July 21, 2015
 @author: Carl Schoonover
 GUI and control of virtual burrow assay v. 3+

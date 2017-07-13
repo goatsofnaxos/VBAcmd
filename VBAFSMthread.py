@@ -1,4 +1,7 @@
 '''
+
+© 2017 The Trustees of Columbia University in the City of New York. All Rights Reserved.
+
 Started September 24, 2015
 @author: Carl Schoonover
 '''
