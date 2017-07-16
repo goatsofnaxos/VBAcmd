@@ -1,4 +1,4 @@
-# © 2017 The Trustees of Columbia University in the City of New York. All Rights Reserved.
+# (c) 2017 The Trustees of Columbia University in the City of New York. All Rights Reserved.
 
 from __future__ import division
 from pylab import *
