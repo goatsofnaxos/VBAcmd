@@ -29,8 +29,8 @@ From Thorlabs or Newport:
 
      Breadboard to assemble the electronics around the frictionless rail system
 
-     e.g. Thorlabs [MB1530/M], posts, post clamps, etc.
+     e.g. Thorlabs MB1530/M, posts, post clamps, etc.
      
 Flexible tubing:
 
-     e.g. Cole-Parmer [WU-95802-00]
+     e.g. Cole-Parmer WU-95802-00
