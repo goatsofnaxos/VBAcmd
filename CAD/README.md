@@ -31,10 +31,10 @@ From Thorlabs or Newport:
 
      e.g. Thorlabs MB1530/M, posts, post clamps, etc.
      
-Flexible tubing:
+Other things:
 
-     e.g. Cole-Parmer WU-95802-00
+     Flexible tubing: Cole-Parmer WU-95802-00
      
-Nylon Tippet:
-
-     e.g. Orvis 1Y27 (Amazon ASIN B004K18TVW)
+     Nylon Tippet: Orvis 1Y27 (Amazon ASIN B004K18TVW)
+     
+     Cotton applicators: Henry Schein 100-9175 (this is to make the bar for the forelimbs, slides into the holes in the 3D-printed tube)
