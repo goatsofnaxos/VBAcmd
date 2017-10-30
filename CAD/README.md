@@ -34,3 +34,7 @@ From Thorlabs or Newport:
 Flexible tubing:
 
      e.g. Cole-Parmer WU-95802-00
+     
+Nylon Tippet:
+
+     e.g. Orvis 1Y27 (Amazon ASIN B004K18TVW)
