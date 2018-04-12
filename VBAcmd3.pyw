@@ -18,6 +18,7 @@ chdir(curpath)
 uic.compileUiDir(curpath)
 from VBAconfig import VBAconfig
 import sys
+from ctypes import byref
 
 from PyQt4 import QtGui, QtCore, Qt
 import PyQt4.Qwt5 as Qwt
