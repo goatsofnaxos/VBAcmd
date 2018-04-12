@@ -71,10 +71,10 @@ class DAQCallbackTask(Task):
         self.circBufferLaser          = numpy.zeros((self.circBuffSamps),dtype=float32)
         self.circBufferForce          = numpy.zeros((self.circBuffSamps),dtype=float32)
         self.circBufferServo          = numpy.zeros((self.circBuffSamps),dtype=float32)
-        self.circBufferDI             = numpy.zeros((self.circBuffSamps/self.DAQBufferSize),dtype=float32)
-        self.circBufferServoSlope     = numpy.zeros((self.circBuffSamps/self.DAQBufferSize),dtype=float32)
-        self.circBufferLaserThreshold = numpy.zeros((self.circBuffSamps/self.DAQBufferSize),dtype=float32) + self.initialUsrPrms.laserThreshold
-        self.circBufferForceThreshold = numpy.zeros((self.circBuffSamps/self.DAQBufferSize),dtype=float32) + self.initialUsrPrms.forceThreshold
+        self.circBufferDI             = numpy.zeros(numpy.int(self.circBuffSamps/self.DAQBufferSize),dtype=float32)
+        self.circBufferServoSlope     = numpy.zeros(numpy.int(self.circBuffSamps/self.DAQBufferSize),dtype=float32)
+        self.circBufferLaserThreshold = numpy.zeros(numpy.int(self.circBuffSamps/self.DAQBufferSize),dtype=float32) + self.initialUsrPrms.laserThreshold
+        self.circBufferForceThreshold = numpy.zeros(numpy.int(self.circBuffSamps/self.DAQBufferSize),dtype=float32) + self.initialUsrPrms.forceThreshold
         self.circBufferTimeLong       = numpy.linspace(start=0,stop=self.circBuffEpoch/1000,num=self.circBufferLaser.size)
         self.circBufferTimeShort      = numpy.linspace(start=0,stop=self.circBuffEpoch/1000,num=self.circBufferDI.size)
         # DAQ read data buffer
