@@ -4,7 +4,7 @@
 
 Started December 2, 2016
 @author: Carl Schoonover
-DAQ and scaling parameters for VBAcmd2
+DAQ and scaling parameters for VBAcmd3
 '''
 
 class VBAconfig():
@@ -18,10 +18,10 @@ class VBAconfig():
                          'doChannelIDs': 'dev1/port1/line0', # Indicate ready state to stimulus control
                          }
 
-        self.encoding = {'rangeServo':        [0, 50],     # measured range 0 to 50 mm        FIRGELLI
+        self.encoding = {'rangeServo':        [0, 50],     # measured range 0 to 50 mm        FIRGELLI measure
                          'rangeServoVout':    [0, 3.3],    # output signal  0 to 3.3 V           L12-50-50-12-I
                          'unitServo':         'mm',
-                         'rangeServoSet':     [0, 50],     # travel range   0 to 50 mm        FIRGELLI
+                         'rangeServoSet':     [0, 50],     # travel range   0 to 50 mm        FIRGELLI command
                          'rangeServoSetVcmd': [0, 5],      # command signal 0 to 5 V             L12-50-50-12-I
                          'unitServoSet':      'mm',
                          'rangeForce':        [-250, 250], # force range    -250 to 250 g     FUTEK
