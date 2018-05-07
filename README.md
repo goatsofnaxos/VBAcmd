@@ -3,7 +3,9 @@ FSM-based control software for Virtual Burrow Assay
 
 © 2017 The Trustees of Columbia University in the City of New York. All Rights Reserved.
 
-Runs on Windows 7 Professional, Python 2.7.5 (WinPython distribution)
+VBAcmd is known to run on:
+- Windows 7 Professional, Python 2.7 (WinPython distribution)
+- Windows 10, Python 2.7 (Anaconda distribution)
 
 Instructions:
   - Rename VBAconfig.py.template to VBAconfig.py 
@@ -20,9 +22,11 @@ Requires:
     - dev5:ao0 servo control  (scaling for FIRGELLI L12-50-50-12-I)
     - dev5/port0/line0 logical in to disable closed loop mode during trial / enable closed loop mode during ITI
     - dev5/port1/line0 logical out to indicate conditions satisfied for trial initiation
+  - NumPy
   - NI-DAQmx available at http://www.ni.com/getting-started/install-software/data-acquisition
   - PyDAQmx available at https://pythonhosted.org/PyDAQmx/
   - PyQt4 available at https://www.riverbankcomputing.com/software/pyqt/download
+  - PyQwt available at https://www.lfd.uci.edu/~gohlke/pythonlibs/
   - transitions available at https://github.com/tyarkoni/transitions
   - ParamLoad and Scaling available at https://github.com/goatsofnaxos/lib  
 
