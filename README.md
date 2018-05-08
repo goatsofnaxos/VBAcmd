@@ -4,8 +4,8 @@ FSM-based control software for Virtual Burrow Assay
 © 2017 The Trustees of Columbia University in the City of New York. All Rights Reserved.
 
 VBAcmd is known to run on:
-- Windows 7 Professional, Python 2.7 (WinPython distribution)
-- Windows 10, Python 2.7 (Anaconda distribution)
+- Windows 7 Professional, WinPython 2.7 distribution
+- Windows 10, Anaconda 2.7 distribution
 
 Instructions:
   - Rename VBAconfig.py.template to VBAconfig.py 
@@ -26,7 +26,7 @@ Requires:
   - NI-DAQmx available at http://www.ni.com/getting-started/install-software/data-acquisition
   - PyDAQmx available at https://pythonhosted.org/PyDAQmx/
   - PyQt4 available at https://www.riverbankcomputing.com/software/pyqt/download
-  - PyQwt available at https://www.lfd.uci.edu/~gohlke/pythonlibs/
+  - PyQwt available at https://www.lfd.uci.edu/~gohlke/pythonlibs/, also copied in this repository (PyQwt-5.2.1-cp27-cp27m-win_amd64.whl)
   - transitions available at https://github.com/tyarkoni/transitions
   - ParamLoad and Scaling available at https://github.com/goatsofnaxos/lib  
 
