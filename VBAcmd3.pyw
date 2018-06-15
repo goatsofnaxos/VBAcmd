@@ -421,9 +421,9 @@ class Main(QtGui.QMainWindow):
 
     def updateDIstate(self):
         if self.task.vbafsm.CMDolfactometerSaysPull[1] and not self.controlMode_manual:
-            self.ui.startSig.setText('OLFACTOMETER SAYS PULL')
+            self.ui.startSig.setText('STIMULUS SAYS PULL')
         elif self.task.vbafsm.CMDolfactometerSaysPull[1] and self.controlMode_manual:
-            self.ui.startSig.setText('OLF: PULL BUT MANUAL')
+            self.ui.startSig.setText('STIM: PULL BUT MANUAL')
         elif not self.task.vbafsm.CMDolfactometerSaysPull[1]:
             self.ui.startSig.setText('_____________________')
 
