@@ -27,7 +27,7 @@ Requires:
   - PyDAQmx available at https://pythonhosted.org/PyDAQmx/
   - PyQt4 available at https://www.riverbankcomputing.com/software/pyqt/download
   - PyQwt5 Windows binaries available at https://www.lfd.uci.edu/~gohlke/pythonlibs/, also copied in this repository (PyQwt-5.2.1-cp27-cp27m-win_amd64.whl); if you prefer to build yourself, see http://pyqwt.sourceforge.net/doc5/installation.html
-  - transitions available at https://github.com/tyarkoni/transitions
+  - transitions available at https://github.com/pytransitions/transitions
   - ParamLoad and Scaling available at https://github.com/goatsofnaxos/lib  
 
 We are not software engineers. This is likely to be buggy, inefficient and recalcitrant to distribution across different platforms--and so welcome any assistance.
