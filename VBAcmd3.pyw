@@ -202,6 +202,7 @@ class Main(QtGui.QMainWindow):
             self.usrPrms.aiRangeMax = 0.05     # (V)
             self.usrPrms.aiRangeMin = -0.03    # (V)
             self.usrPrms.laserSDThreshold = 3  # ([STD of mm] * 100)
+            self.usrPrms.laserServoCalib = 0   # (mm) offset to align laser and servo readings
         # Launch the UI
         QtGui.QMainWindow.__init__(self)
         self.ui = Ui_MainWindow()
@@ -252,6 +253,9 @@ class Main(QtGui.QMainWindow):
         self.ui.manualRadioButton.toggled.connect(self.manualRadioButton_toggled)
         self.ui.slackPositionRadioButton.toggled.connect(self.slackPositionRadioButton_toggled)
         self.ui.laserSDThresholdDoubleSpinBox.valueChanged.connect(self.laserSDThreshold_changed)
+
+        self.ui.calibratePushButton.clicked.connect(self.calibratePushButton_clicked)
+
         # Set up event signals
         app.aboutToQuit.connect(self.shutDown)
         self.writeSignal.connect(self.sigProcess)
@@ -303,7 +307,7 @@ class Main(QtGui.QMainWindow):
         # Construct scaled circular buffer of analog and digital inputs (0:LASER, 1:FORCE, 2:SERVO, 3:ANALOGIN)
         self.task.circBufferLaser[indexLong[0]:indexLong[1]]    = self.task.scaleLaser.sig2act(self.task.aiDataForSigProc[0,:])
         self.task.circBufferForce[indexLong[0]:indexLong[1]]    = self.task.scaleForce.sig2act(self.task.aiDataForSigProc[1,:])
-        self.task.circBufferServo[indexLong[0]:indexLong[1]]    = self.task.scaleServo.actual[1] - self.task.scaleServo.sig2act(self.task.aiDataForSigProc[2,:])
+        self.task.circBufferServo[indexLong[0]:indexLong[1]]    = self.task.scaleServo.actual[1] - self.task.scaleServo.sig2act(self.task.aiDataForSigProc[2,:]) + self.usrPrms.laserServoCalib
         self.task.circBufferAnalogIn[indexLong[0]:indexLong[1]] = self.task.scaleAI.sig2act(self.task.aiDataForSigProc[3,:])
         self.task.circBufferDI[self.circBufIndex] = self.task.vbafsm.CMDolfactometerSaysPull[1]
         # Construct circular buffer of thresholds
@@ -333,6 +337,9 @@ class Main(QtGui.QMainWindow):
         self.task.vbafsm.CMDdoneStruggling =  numpy.random.random_sample() > 0.9
         self.task.vbafsm.CMDanimalEscaped = numpy.random.random_sample() > 0.9
         self.task.vbafsm.CMDanimalReady = numpy.random.random_sample() > 0.9 '''
+
+        # Compute difference between last scaled laser value and last scaled servo reading value for calibration
+        self.laserServoDelta = self.task.circBufferLaser[indexLong[1]] - self.task.circBufferServo[indexLong[1]]
 
         # Plot curves in GUI
         if self.task.totNumBuffers % self.plotEveryNBuffers == 0:
@@ -495,6 +502,8 @@ class Main(QtGui.QMainWindow):
     def aiRangeMinSpinBox_changed(self):
         self.usrPrms.aiRangeMin = self.ui.aiRangeMinSpinBox.value()
         self.ui.analogInPlot.setAxisScale(Qwt.QwtPlot.yLeft,self.usrPrms.aiRangeMin,self.usrPrms.aiRangeMax)
+    def calibratePushButton_clicked(self):
+        self.usrPrms.laserServoCalib = self.laserServoDelta
     def manualRadioButton_toggled(self):
         self.task.vbafsm.CMDrestartSignal = 1
         if self.ui.manualRadioButton.isChecked():
