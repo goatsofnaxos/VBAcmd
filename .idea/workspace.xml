@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d56a0b5d-0c47-41d7-9251-ff45ada8ded9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VBAcmd3.pyw" afterPath="$PROJECT_DIR$/VBAcmd3.pyw" />
-    </list>
+    <list default="true" id="d56a0b5d-0c47-41d7-9251-ff45ada8ded9" name="Default" comment="" />
     <ignored path="VBAcmd.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -153,7 +151,7 @@
       <file leaf-file-name="VBAcmd3.pyw" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/VBAcmd3.pyw">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="678">
+            <state relative-caret-position="2625">
               <caret line="341" column="0" selection-start-line="341" selection-start-column="0" selection-end-line="341" selection-end-column="0" />
               <folding />
             </state>
@@ -225,7 +223,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="137" />
+    <option name="y" value="156" />
     <option name="width" value="1498" />
     <option name="height" value="1027" />
   </component>
@@ -657,7 +656,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1498" height="1027" extended-state="0" />
+    <frame x="137" y="156" width="1498" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27186513" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1048,7 +1047,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/VBAcmd3.pyw">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="678">
+        <state relative-caret-position="2625">
           <caret line="341" column="0" selection-start-line="341" selection-start-column="0" selection-end-line="341" selection-end-column="0" />
           <folding />
         </state>
