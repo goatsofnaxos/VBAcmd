@@ -504,6 +504,7 @@ class Main(QtGui.QMainWindow):
         self.ui.analogInPlot.setAxisScale(Qwt.QwtPlot.yLeft,self.usrPrms.aiRangeMin,self.usrPrms.aiRangeMax)
     def calibratePushButton_clicked(self):
         self.usrPrms.laserServoCalib = self.laserServoDelta
+        print 'Calibrating laser/servo offset:', self.usrPrms.laserServoCalib
     def manualRadioButton_toggled(self):
         self.task.vbafsm.CMDrestartSignal = 1
         if self.ui.manualRadioButton.isChecked():
