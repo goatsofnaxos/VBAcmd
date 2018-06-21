@@ -202,7 +202,7 @@ class Main(QtGui.QMainWindow):
             self.usrPrms.aiRangeMax = 10.0       # (V)
             self.usrPrms.aiRangeMin = -10.0      # (V)
             self.usrPrms.laserSDThreshold = 15.0 # ([STD of mm] * 100)
-            self.usrPrms.laserServoCalib = 60.0  # (mm) offset to align laser and servo readings
+            self.usrPrms.laserServoCalib = 42.0  # (mm) offset to align laser and servo readings
         # Launch the UI
         QtGui.QMainWindow.__init__(self)
         self.ui = Ui_MainWindow()
