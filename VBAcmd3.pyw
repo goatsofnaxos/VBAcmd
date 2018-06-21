@@ -339,7 +339,6 @@ class Main(QtGui.QMainWindow):
         self.task.vbafsm.CMDanimalReady = numpy.random.random_sample() > 0.9 '''
 
         # Compute difference between last scaled laser value and last scaled servo reading value for calibration
-        print self.task.circBufferLaser[indexLong[0]], numpy.mean(self.task.scaleServo.actual[1] - self.task.scaleServo.sig2act(self.task.aiDataForSigProc[2,:]))
         self.laserServoDelta = self.task.circBufferLaser[indexLong[0]] - numpy.mean(self.task.scaleServo.actual[1] - self.task.scaleServo.sig2act(self.task.aiDataForSigProc[2,:]))
 
         # Plot curves in GUI
