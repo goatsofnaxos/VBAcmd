@@ -195,13 +195,13 @@ class Main(QtGui.QMainWindow):
             self.usrPrms.laserThreshold = 70.0   # (mm)
             self.usrPrms.forceThreshold = 15.0   # (g)
             self.usrPrms.struggleWait = 1.0      # (s) amount of time to wait after animal done struggling
-            self.usrPrms.pullPosition = 17       # (mm)
-            self.usrPrms.slackPosition = 40      # (mm)
+            self.usrPrms.pullPosition = 17.0     # (mm) "egress"
+            self.usrPrms.slackPosition = 40.0    # (mm) "ingress"
             self.usrPrms.movementWait = 1.5      # (s) amount of time to wait to make sure animal not moving
             self.usrPrms.servoWait = 1.0         # (s) amount of time to wait after servo moves before transitioning
             self.usrPrms.aiRangeMax = 10.0       # (V)
             self.usrPrms.aiRangeMin = -10.0      # (V)
-            self.usrPrms.laserSDThreshold = 15.0 # ([STD of mm] * 100)
+            self.usrPrms.laserSDThreshold = 15.0 # ([SD of mm] * 100)
             self.usrPrms.laserServoCalib = 42.0  # (mm) offset to align laser and servo readings
         # Launch the UI
         QtGui.QMainWindow.__init__(self)
