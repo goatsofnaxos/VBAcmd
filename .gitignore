@@ -1,6 +1,8 @@
+userParamsFile.dat
 VBAconfig.py
 VBAconfig.pyc
 !VBAconfig.py.template
+
 *.pyc
 .idea/*
 
