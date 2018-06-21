@@ -339,7 +339,8 @@ class Main(QtGui.QMainWindow):
         self.task.vbafsm.CMDanimalReady = numpy.random.random_sample() > 0.9 '''
 
         # Compute difference between last scaled laser value and last scaled servo reading value for calibration
-        self.laserServoDelta = self.task.circBufferLaser[indexLong[1]-1] - self.task.circBufferServo[indexLong[1]-1]
+        print self.task.circBufferLaser[indexLong[0]], self.task.circBufferServo[indexLong[0]]
+        self.laserServoDelta = self.task.circBufferLaser[indexLong[0]] - self.task.circBufferServo[indexLong[0]]
 
         # Plot curves in GUI
         if self.task.totNumBuffers % self.plotEveryNBuffers == 0:
