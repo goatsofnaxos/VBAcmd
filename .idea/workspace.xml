@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d56a0b5d-0c47-41d7-9251-ff45ada8ded9" name="Default" comment="" />
+    <list default="true" id="d56a0b5d-0c47-41d7-9251-ff45ada8ded9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VBAcmd3.pyw" afterPath="$PROJECT_DIR$/VBAcmd3.pyw" />
+    </list>
     <ignored path="VBAcmd.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -11,27 +13,149 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
-  </component>
-  <component name="DaemonCodeAnalyzer">
-    <disable_hints />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="VBAcmd" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Olfactometer6.py" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Olfactometer6.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../olfactometer/Olfactometer6.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.7793103" vertical-offset="4079" max-vertical-offset="15011">
-              <caret line="331" column="94" selection-start-line="331" selection-start-column="94" selection-end-line="331" selection-end-column="94" />
+            <state relative-caret-position="4815">
+              <caret line="345" column="94" selection-start-line="345" selection-start-column="94" selection-end-line="345" selection-end-column="94" />
               <folding>
-                <element signature="e#622#653#0" expanded="true" />
+                <marker date="1512506208000" expanded="true" signature="0:620" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+                <marker date="1512506208000" expanded="true" signature="622:964" ph="import ..." />
+                <marker date="1512506208000" expanded="true" signature="990:1859" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="1015:1494" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="1521:1639" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="1670:1778" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="1805:1859" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="1887:3330" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="1912:2277" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="2304:2392" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="2465:2711" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="2751:2997" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="2773:2877" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="2891:2997" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="3047:3330" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="3355:3530" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="3380:3530" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="3546:10133" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="3571:4377" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="4403:4868" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="4435:4592" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="4606:4868" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="4919:5084" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="4966:5063" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="5127:5873" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="5787:5873" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="5923:8654" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="6156:8654" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="6423:6542" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="6630:6742" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="6871:8021" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="6955:8021" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="7762:7959" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="7854:7959" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="8217:8378" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="8568:8654" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="8706:9405" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="8755:9095" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="9435:9571" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="9602:9762" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="9792:9863" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="9895:10042" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="10076:10133" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="10152:19781" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="10192:11620" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="10962:11072" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="11645:12670" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="12724:15494" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="13445:13754" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="15547:16017" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="15582:16017" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="15750:16017" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="16061:16712" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="16157:16681" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="16297:16460" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="16509:16681" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="16772:17424" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="17494:18643" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="17731:17820" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="17900:18031" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="18045:18166" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="18678:19102" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="19136:19163" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="19202:19239" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="19278:19369" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="19394:19781" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="19804:37932" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="19829:22792" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="20264:20346" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="22817:24200" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="24256:24478" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="24526:25026" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="24862:24965" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="25074:25489" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="25122:25374" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="25388:25489" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="25566:26011" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="25614:25814" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="25668:25814" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="26038:26387" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="26085:26307" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="26463:29037" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="26952:28647" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="27220:28578" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="27507:27744" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="29120:30286" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="29139:30286" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="30318:30536" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="30561:30717" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="30741:30840" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="30866:33418" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="31317:31504" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="31518:31688" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="31814:33321" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="32205:32373" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="32460:32646" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="32835:32910" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="33100:33219" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="33462:34033" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="33471:33724" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="33770:34033" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="34066:34135" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="34184:35627" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="34204:35627" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="34989:35627" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="35036:35627" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="35663:35914" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="35946:36337" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="36029:36220" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="36370:36462" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="36489:36861" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="36583:36750" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="36886:37189" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="37214:37932" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="37469:37544" ph="..." />
+                <marker date="1512506208000" expanded="true" signature="37934:37953" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+                <marker date="1512506208000" expanded="true" signature="38014:38679" ph="'''...'''" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VBAcmd3.pyw" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/VBAcmd3.pyw">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="588">
+              <caret line="204" column="47" selection-start-line="204" selection-start-column="47" selection-end-line="204" selection-end-column="47" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -42,30 +166,29 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../loopCloser/loopCloser6.pyw" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/../olfactometer/Olfactometer5.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/VBAcmd1.pyw" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/../olfactometer/OlfactometerDO4_shock.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/VBAFSMthread3.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/VBAFSMthread.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/../olfactometer/do.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/VBAFSMthread3.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/VBAcmd1.pyw" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/../olfactometer/OlfactometerDO3.py" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../olfactometer/OlfactometerDO4_shock.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../olfactometer/Olfactometer5.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/VBAcmd1.py" />
         <option value="$PROJECT_DIR$/foo.py" />
-        <option value="$PROJECT_DIR$/../../bitsAndPieces/SDKKremap.py" />
+        <option value="$USER_HOME$/bitsAndPieces/SDKKremap.py" />
         <option value="$PROJECT_DIR$/stateMachine.py" />
         <option value="$PROJECT_DIR$/../olfactometer/OlfactometerDO4_shock.py" />
         <option value="$PROJECT_DIR$/../olfactometer/do.py" />
         <option value="$PROJECT_DIR$/../loopCloser/loopCloser6.pyw" />
-        <option value="$PROJECT_DIR$/../../oldStuff/helloworld/helloworld.py" />
+        <option value="$USER_HOME$/oldStuff/helloworld/helloworld.py" />
         <option value="$PROJECT_DIR$/../olfactometer/Olfactometer5.py" />
         <option value="$PROJECT_DIR$/../firstData/firstData2.pyw" />
         <option value="$PROJECT_DIR$/../flowctl/flowctlUI.pyw" />
-        <option value="$PROJECT_DIR$/../../lib/DynamicUpdatePlot.py" />
+        <option value="$USER_HOME$/lib/DynamicUpdatePlot.py" />
         <option value="$PROJECT_DIR$/../safeZone/safeZone1.pyw" />
         <option value="$PROJECT_DIR$/../flowctl/flowctlUI2.pyw" />
         <option value="$PROJECT_DIR$/params.py" />
@@ -74,38 +197,37 @@
         <option value="$PROJECT_DIR$/VBAFSMthread4.py" />
         <option value="$PROJECT_DIR$/VBAconfig.py.template" />
         <option value="$PROJECT_DIR$/LICENSE.md" />
-        <option value="$PROJECT_DIR$/../../lib/LICENSE.md" />
+        <option value="$USER_HOME$/lib/LICENSE.md" />
         <option value="$PROJECT_DIR$/CAD/README.md" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/../../lib/README.md" />
-        <option value="$PROJECT_DIR$/../../lib/ContinuousAI.py" />
-        <option value="$PROJECT_DIR$/../../lib/DevID.py" />
-        <option value="$PROJECT_DIR$/../../lib/EmailAlert.py" />
-        <option value="$PROJECT_DIR$/../../lib/FlowctlCmd.py" />
-        <option value="$PROJECT_DIR$/../../lib/FuncThread.py" />
-        <option value="$PROJECT_DIR$/../../lib/ParamLoad.py" />
-        <option value="$PROJECT_DIR$/../../lib/Scaling.py" />
-        <option value="$PROJECT_DIR$/../../lib/snm.py" />
+        <option value="$USER_HOME$/lib/README.md" />
+        <option value="$USER_HOME$/lib/ContinuousAI.py" />
+        <option value="$USER_HOME$/lib/DevID.py" />
+        <option value="$USER_HOME$/lib/EmailAlert.py" />
+        <option value="$USER_HOME$/lib/FlowctlCmd.py" />
+        <option value="$USER_HOME$/lib/FuncThread.py" />
+        <option value="$USER_HOME$/lib/ParamLoad.py" />
+        <option value="$USER_HOME$/lib/Scaling.py" />
+        <option value="$USER_HOME$/lib/snm.py" />
         <option value="$PROJECT_DIR$/ao.py" />
         <option value="$PROJECT_DIR$/UIdesign.py" />
         <option value="$PROJECT_DIR$/VBAcmd.py" />
         <option value="$PROJECT_DIR$/VBAcmd1.pyw" />
         <option value="$PROJECT_DIR$/VBAcmd2.pyw" />
-        <option value="$PROJECT_DIR$/VBAcmd3.pyw" />
         <option value="$PROJECT_DIR$/VBAconfig.py" />
         <option value="$PROJECT_DIR$/VBAFSM.py" />
         <option value="$PROJECT_DIR$/VBAFSMthread.py" />
         <option value="$PROJECT_DIR$/VBAFSMthread2.py" />
         <option value="$PROJECT_DIR$/VBAFSMthread3.py" />
         <option value="$PROJECT_DIR$/../olfactometer/Olfactometer6.py" />
+        <option value="$PROJECT_DIR$/VBAcmd3.pyw" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1928" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="y" value="23" />
+    <option name="width" value="1498" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Default">
@@ -278,12 +400,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\WinPython-64bit-2.7.5.3\python-2.7.5.amd64\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../lib" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/lib" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="VBAcmd" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../lib/FlowctlCmd.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/lib/FlowctlCmd.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <RunnerSettings RunnerId="PythonRunner" />
@@ -364,7 +486,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
+    <configuration default="true" type="Tox" factoryName="Tox">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -374,40 +496,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="VBAcmd" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="py.test">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="VBAcmd" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="testToRun" value="" />
-      <option name="keywords" value="" />
-      <option name="params" value="" />
-      <option name="USE_PARAM" value="false" />
-      <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Attests">
@@ -469,6 +557,52 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="VBAcmd" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="VBAcmd" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.flowctlUI2.pyw" />
       <item index="1" class="java.lang.String" itemvalue="Python.FlowctlCmd" />
@@ -486,7 +620,9 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -495,6 +631,7 @@
       <changelist id="d56a0b5d-0c47-41d7-9251-ff45ada8ded9" name="Default" comment="" />
       <created>1437504095714</created>
       <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
       <updated>1437504095714</updated>
     </task>
     <servers />
@@ -520,49 +657,49 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="0" y="23" width="1498" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27186513" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25093168" sideWeight="0.50035286" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43454346" sideWeight="0.49934125" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23024236" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.330033" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.2750275" sideWeight="0.50065875" order="2" side_tool="true" content_ui="tabs" x="59" y="360" width="797" height="343" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34606206" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27186513" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25093168" sideWeight="0.50035286" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43454346" sideWeight="0.49934125" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22987093" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.330033" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.2750275" sideWeight="0.50065875" order="2" side_tool="true" content_ui="tabs" x="59" y="360" width="797" height="343" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34606206" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25093168" sideWeight="0.50035286" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43454346" sideWeight="0.49934125" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.2750275" sideWeight="0.50065875" order="2" side_tool="true" content_ui="tabs" x="-1698" y="173" width="923" height="708" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.330033" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22724015" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15268818" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25093168" sideWeight="0.50035286" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43454346" sideWeight="0.49934125" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.2750275" sideWeight="0.50065875" order="2" side_tool="true" content_ui="tabs" x="-1698" y="173" width="923" height="708" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.330033" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22724015" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15268818" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -576,16 +713,11 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="myTodoPanelSettings">
-      <TodoPanelSettings />
-    </option>
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/../../oldStuff/helloworld/helloworld.py</url>
+          <url>file://$USER_HOME$/oldStuff/helloworld/helloworld.py</url>
           <line>5</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
@@ -597,364 +729,328 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ao.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VBAcmd1.pyw">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="960" max-vertical-offset="3298">
+        <state relative-caret-position="0">
           <caret line="73" column="40" selection-start-line="73" selection-start-column="40" selection-end-line="73" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ao.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VBAcmd1.pyw">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="960" max-vertical-offset="3298">
+        <state relative-caret-position="0">
           <caret line="73" column="40" selection-start-line="73" selection-start-column="40" selection-end-line="73" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ao.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../bitsAndPieces/linearActuatorCMD.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1559633" vertical-offset="0" max-vertical-offset="763">
-          <caret line="9" column="63" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../loopCloser/loopCloser4.pyw">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5389">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/bitsAndPieces/linearActuatorCMD.py" />
+    <entry file="file://$PROJECT_DIR$/../loopCloser/loopCloser4.pyw" />
     <entry file="file://$PROJECT_DIR$/../olfactometer/OlfactometerDO3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2542056" vertical-offset="0" max-vertical-offset="5202">
+        <state relative-caret-position="0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../olfactometer/OlfactometerDO4_shock.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8993">
+        <state relative-caret-position="0">
           <caret line="5" column="96" selection-start-line="5" selection-start-column="96" selection-end-line="5" selection-end-column="96" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../loopCloser/loopCloser5.pyw">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.04" vertical-offset="3847" max-vertical-offset="6171">
-          <caret line="246" column="20" selection-start-line="246" selection-start-column="0" selection-end-line="247" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../loopCloser/loopCloser5.pyw" />
     <entry file="file://$PROJECT_DIR$/../olfactometer/do.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2361111" vertical-offset="0" max-vertical-offset="504">
+        <state relative-caret-position="0">
           <caret line="7" column="24" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../oldStuff/helloworld/helloworld.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48166665" vertical-offset="0" max-vertical-offset="646">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-          <folding>
-            <element signature="e#46#56#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/WinPython-64bit-2.7.5.3/python-2.7.5.amd64/Lib/threading.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="12219" max-vertical-offset="22695">
-          <caret line="736" column="0" selection-start-line="736" selection-start-column="0" selection-end-line="736" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/oldStuff/helloworld/helloworld.py" />
+    <entry file="file://C:/WinPython-64bit-2.7.5.3/python-2.7.5.amd64/Lib/threading.py" />
     <entry file="file://$PROJECT_DIR$/../olfactometer/Olfactometer5.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7050691" vertical-offset="1224" max-vertical-offset="6426">
+        <state relative-caret-position="0">
           <caret line="113" column="35" selection-start-line="113" selection-start-column="35" selection-end-line="113" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../firstData/firstData2.pyw">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.351852" vertical-offset="252" max-vertical-offset="3026">
-          <caret line="35" column="38" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../safeZone/window.pyw">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="881">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/WinPython-64bit-2.7.5.3/python-2.7.5.amd64/Lib/weakref.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="420" max-vertical-offset="6324">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../flowctl/flowctlUI.pyw">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.72" vertical-offset="357" max-vertical-offset="1462">
-          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../safeZone/safeZone1.pyw">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.693548" vertical-offset="3903" max-vertical-offset="4709">
-          <caret line="254" column="26" selection-start-line="254" selection-start-column="17" selection-end-line="254" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../flowctl/flowctlUI2.pyw">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2932243" vertical-offset="599" max-vertical-offset="1683">
-          <caret line="50" column="55" selection-start-line="50" selection-start-column="55" selection-end-line="50" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../loopCloser/loopCloser6.pyw">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.41" vertical-offset="525" max-vertical-offset="6681">
-          <caret line="16" column="74" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../firstData/firstData2.pyw" />
+    <entry file="file://$PROJECT_DIR$/../safeZone/window.pyw" />
+    <entry file="file://C:/WinPython-64bit-2.7.5.3/python-2.7.5.amd64/Lib/weakref.py" />
+    <entry file="file://$PROJECT_DIR$/../flowctl/flowctlUI.pyw" />
+    <entry file="file://$PROJECT_DIR$/../safeZone/safeZone1.pyw" />
+    <entry file="file://$PROJECT_DIR$/../flowctl/flowctlUI2.pyw" />
+    <entry file="file://$USER_HOME$/lib/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/../loopCloser/loopCloser6.pyw" />
     <entry file="file://$PROJECT_DIR$/VBAconfig.py.template">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07285714" vertical-offset="0" max-vertical-offset="700">
+        <state relative-caret-position="0">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.074127905" vertical-offset="0" max-vertical-offset="688">
+        <state relative-caret-position="0">
           <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CAD/LICENSE.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.074127905" vertical-offset="0" max-vertical-offset="688">
+        <state relative-caret-position="0">
           <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CAD/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09883721" vertical-offset="0" max-vertical-offset="688">
+        <state relative-caret-position="0">
           <caret line="4" column="88" selection-start-line="4" selection-start-column="88" selection-end-line="4" selection-end-column="88" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10074074" vertical-offset="0" max-vertical-offset="714">
+        <state relative-caret-position="0">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12592593" vertical-offset="0" max-vertical-offset="675">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/ContinuousAI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1037">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/DevID.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1785">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/EmailAlert.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1394">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/FlowctlCmd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1785">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/LICENSE.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.04" vertical-offset="0" max-vertical-offset="153">
-          <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/FuncThread.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/ParamLoad.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/Scaling.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/snm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1836">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../flowctl/flowctl.pyw">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2125">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/lib/README.md" />
+    <entry file="file://$USER_HOME$/lib/ContinuousAI.py" />
+    <entry file="file://$USER_HOME$/lib/DevID.py" />
+    <entry file="file://$USER_HOME$/lib/EmailAlert.py" />
+    <entry file="file://$USER_HOME$/lib/FlowctlCmd.py" />
+    <entry file="file://$USER_HOME$/lib/LICENSE.md" />
+    <entry file="file://$USER_HOME$/lib/FuncThread.py" />
+    <entry file="file://$USER_HOME$/lib/ParamLoad.py" />
+    <entry file="file://$USER_HOME$/lib/Scaling.py" />
+    <entry file="file://$USER_HOME$/lib/snm.py" />
+    <entry file="file://$PROJECT_DIR$/../flowctl/flowctl.pyw" />
     <entry file="file://$PROJECT_DIR$/ao.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+        <state relative-caret-position="0">
           <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UIdesign.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7208">
+        <state relative-caret-position="0">
           <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VBAcmd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="5610">
+        <state relative-caret-position="0">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VBAcmd1.pyw">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7939">
+        <state relative-caret-position="0">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VBAcmd2.pyw">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8806">
+        <state relative-caret-position="0">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VBAcmd3.pyw">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9112">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VBAconfig.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/VBAconfig.py" />
     <entry file="file://$PROJECT_DIR$/VBAFSM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1547">
+        <state relative-caret-position="0">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VBAFSMthread.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
+        <state relative-caret-position="0">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/window.pyw">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5780">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VBAFSMthread2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2244">
+        <state relative-caret-position="0">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VBAFSMthread3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2703">
+        <state relative-caret-position="0">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../olfactometer/Olfactometer6.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7793103" vertical-offset="4079" max-vertical-offset="15011">
-          <caret line="331" column="94" selection-start-line="331" selection-start-column="94" selection-end-line="331" selection-end-column="94" />
+        <state relative-caret-position="4815">
+          <caret line="345" column="94" selection-start-line="345" selection-start-column="94" selection-end-line="345" selection-end-column="94" />
           <folding>
-            <element signature="e#622#653#0" expanded="true" />
+            <marker date="1512506208000" expanded="true" signature="0:620" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1512506208000" expanded="true" signature="622:964" ph="import ..." />
+            <marker date="1512506208000" expanded="true" signature="990:1859" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="1015:1494" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="1521:1639" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="1670:1778" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="1805:1859" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="1887:3330" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="1912:2277" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="2304:2392" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="2465:2711" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="2751:2997" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="2773:2877" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="2891:2997" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="3047:3330" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="3355:3530" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="3380:3530" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="3546:10133" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="3571:4377" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="4403:4868" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="4435:4592" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="4606:4868" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="4919:5084" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="4966:5063" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="5127:5873" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="5787:5873" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="5923:8654" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="6156:8654" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="6423:6542" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="6630:6742" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="6871:8021" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="6955:8021" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="7762:7959" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="7854:7959" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="8217:8378" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="8568:8654" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="8706:9405" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="8755:9095" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="9435:9571" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="9602:9762" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="9792:9863" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="9895:10042" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="10076:10133" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="10152:19781" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="10192:11620" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="10962:11072" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="11645:12670" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="12724:15494" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="13445:13754" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="15547:16017" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="15582:16017" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="15750:16017" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="16061:16712" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="16157:16681" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="16297:16460" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="16509:16681" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="16772:17424" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="17494:18643" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="17731:17820" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="17900:18031" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="18045:18166" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="18678:19102" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="19136:19163" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="19202:19239" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="19278:19369" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="19394:19781" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="19804:37932" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="19829:22792" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="20264:20346" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="22817:24200" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="24256:24478" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="24526:25026" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="24862:24965" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="25074:25489" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="25122:25374" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="25388:25489" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="25566:26011" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="25614:25814" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="25668:25814" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="26038:26387" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="26085:26307" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="26463:29037" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="26952:28647" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="27220:28578" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="27507:27744" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="29120:30286" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="29139:30286" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="30318:30536" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="30561:30717" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="30741:30840" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="30866:33418" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="31317:31504" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="31518:31688" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="31814:33321" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="32205:32373" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="32460:32646" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="32835:32910" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="33100:33219" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="33462:34033" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="33471:33724" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="33770:34033" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="34066:34135" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="34184:35627" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="34204:35627" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="34989:35627" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="35036:35627" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="35663:35914" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="35946:36337" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="36029:36220" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="36370:36462" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="36489:36861" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="36583:36750" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="36886:37189" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="37214:37932" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="37469:37544" ph="..." />
+            <marker date="1512506208000" expanded="true" signature="37934:37953" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1512506208000" expanded="true" signature="38014:38679" ph="'''...'''" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VBAcmd3.pyw">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="204" column="47" selection-start-line="204" selection-start-column="47" selection-end-line="204" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>

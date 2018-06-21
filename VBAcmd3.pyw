@@ -192,17 +192,17 @@ class Main(QtGui.QMainWindow):
         if self.usrPrms.loadedOldParams == 1:
             pass
         else:
-            self.usrPrms.laserThreshold = 21.5 # (mm)
-            self.usrPrms.forceThreshold = 6.5  # (g)
-            self.usrPrms.struggleWait = 1      # (s) amount of time to wait after animal done struggling
-            self.usrPrms.pullPosition = 2      # (mm)
-            self.usrPrms.slackPosition = 18    # (mm)
-            self.usrPrms.movementWait = 1.5    # (s) amount of time to wait to make sure animal not moving
-            self.usrPrms.servoWait = 1         # (s) amount of time to wait after servo moves before transitioning
-            self.usrPrms.aiRangeMax = 0.05     # (V)
-            self.usrPrms.aiRangeMin = -0.03    # (V)
-            self.usrPrms.laserSDThreshold = 3  # ([STD of mm] * 100)
-            self.usrPrms.laserServoCalib = 0   # (mm) offset to align laser and servo readings
+            self.usrPrms.laserThreshold = 70.0   # (mm)
+            self.usrPrms.forceThreshold = 15.0   # (g)
+            self.usrPrms.struggleWait = 1.0      # (s) amount of time to wait after animal done struggling
+            self.usrPrms.pullPosition = 17       # (mm)
+            self.usrPrms.slackPosition = 40      # (mm)
+            self.usrPrms.movementWait = 1.5      # (s) amount of time to wait to make sure animal not moving
+            self.usrPrms.servoWait = 1.0         # (s) amount of time to wait after servo moves before transitioning
+            self.usrPrms.aiRangeMax = 10.0       # (V)
+            self.usrPrms.aiRangeMin = -10.0      # (V)
+            self.usrPrms.laserSDThreshold = 15.0 # ([STD of mm] * 100)
+            self.usrPrms.laserServoCalib = 60.0  # (mm) offset to align laser and servo readings
         # Launch the UI
         QtGui.QMainWindow.__init__(self)
         self.ui = Ui_MainWindow()
@@ -339,8 +339,8 @@ class Main(QtGui.QMainWindow):
         self.task.vbafsm.CMDanimalReady = numpy.random.random_sample() > 0.9 '''
 
         # Compute difference between last scaled laser value and last scaled servo reading value for calibration
-        print self.task.circBufferLaser[indexLong[0]], self.task.circBufferServo[indexLong[0]]
-        self.laserServoDelta = self.task.circBufferLaser[indexLong[0]] - self.task.circBufferServo[indexLong[0]]
+        print self.task.circBufferLaser[indexLong[0]], numpy.mean(self.task.scaleServo.actual[1] - self.task.scaleServo.sig2act(self.task.aiDataForSigProc[2,:]))
+        self.laserServoDelta = self.task.circBufferLaser[indexLong[0]] - numpy.mean(self.task.scaleServo.actual[1] - self.task.scaleServo.sig2act(self.task.aiDataForSigProc[2,:]))
 
         # Plot curves in GUI
         if self.task.totNumBuffers % self.plotEveryNBuffers == 0:
