@@ -3,11 +3,14 @@ FSM-based control software for Virtual Burrow Assay
 
 © 2017 The Trustees of Columbia University in the City of New York. All Rights Reserved.
 
+For help, email Carl Schoonover [ces2001 AT columbia DOT edu] or Andrew Fink [af2243 AT columbia DOT edu]
+
 VBAcmd is known to run on:
 - Windows 7 Professional, WinPython 2.7 distribution
 - Windows 10, Anaconda 2.7 distribution
+Anaconda is strongly recommended over WinPython
 
-Instructions:
+Instructions (detailed step-by-step instructions to come):
   - Rename VBAconfig.py.template to VBAconfig.py 
   - If necessary correct DAQ and scaling parameters in the new VBAconfig.py file (git pull will not overwrite your local VBAconfig.py file)
   - Run VBAcmd3.pyw
