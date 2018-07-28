@@ -8,6 +8,7 @@ For help, email Carl Schoonover [ces2001 AT columbia DOT edu] or Andrew Fink [af
 VBAcmd is known to run on:
 - Windows 7 Professional, WinPython 2.7 distribution
 - Windows 10, Anaconda 2.7 distribution
+
 Anaconda is strongly recommended over WinPython
 
 Instructions (detailed step-by-step instructions to come):
