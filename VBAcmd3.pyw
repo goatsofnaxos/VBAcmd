@@ -104,6 +104,9 @@ class DAQCallbackTask(Task):
         self.ao.CreateAOVoltageChan(vbaconfig.channels['aoChannelIDs'],"",self.Vrange[0],self.Vrange[1],DAQmx_Val_Volts,None)
 
         self.ao.StartTask()
+
+        self.ao.aowritedata[0] = 1
+        self.ao.aowritedata[1] = 3
         self.ao.WriteAnalogF64(self.ao.numsamples,self.autostart,self.timeout,DAQmx_Val_GroupByChannel,self.ao.aowritedata+0,self.ao.write,None)
 
 
