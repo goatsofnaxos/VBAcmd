@@ -13,11 +13,7 @@ class VBAconfig():
 
         self.channels = {'aiChannelIDs': 'dev1/ai0:3',       # Laser / Force / Servo position / Optional analog input
                          'ainumchanels': 4,
-
-# OLD                         'aoChannelIDs': 'dev1/ao0',         # Servo command
-                         'aonumchanels': 2,
-                         'aoChannelIDs': 'dev1/ao0:1',         # Servo command / VBA state
-
+                         'aoChannelIDs': 'dev1/ao0',         # Servo command
                          'diChannelIDs': 'dev1/port0/line0', # Toggle closed / open loop mode
                          'doChannelIDs': 'dev1/port1/line0', # Indicate ready state to stimulus control
                          }
@@ -38,4 +34,3 @@ class VBAconfig():
                          'rangeAIVout':       [-10, 10],   # output signal   -10V to 5V          Analog input
                          'unitAI':            'V',
                          }
-

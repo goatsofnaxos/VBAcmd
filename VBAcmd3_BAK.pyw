@@ -53,10 +53,8 @@ class DAQCallbackTask(Task):
         self.scaleAI       = Scaling(vbaconfig.encoding['rangeAI'],vbaconfig.encoding['rangeAIVout'],vbaconfig.encoding['unitAI'])
 
         # ANALOG INPUT (Laser / Force / Servo position / Optional analog input)
-        self.numaiChannels =  vbaconfig.channels['ainumchanels']
+        self.numChannels =    vbaconfig.channels['ainumchanels']
         self.aiChannelIDs =   vbaconfig.channels['aiChannelIDs']
-        self.numaoChannels =  vbaconfig.channels['aonumchanels']
-        self.aoChannelIDs =   vbaconfig.channels['aoChannelIDs']
         self.airt =           1000 # Hz
         self.DAQBufferEpoch = 100 # ms
         self.numBuffsPerSec = int(round(1000 / self.DAQBufferEpoch)) # Hz
@@ -80,34 +78,23 @@ class DAQCallbackTask(Task):
         self.circBufferTimeLong       = numpy.linspace(start=0,stop=self.circBuffEpoch/1000,num=self.circBufferLaser.size)
         self.circBufferTimeShort      = numpy.linspace(start=0,stop=self.circBuffEpoch/1000,num=self.circBufferDI.size)
         # DAQ read data buffer
-        self.DAQbufferDataIn = numpy.tile(numpy.zeros((self.DAQBufferSize,), dtype=numpy.float64),(self.numaiChannels,1)) # Time column-wise
-        # self.DAQbufferDataIn = numpy.tile(numpy.zeros((self.DAQBufferSize,), dtype=numpy.float64),(self.numaiChannels,1)) # Time row-wise
+        self.DAQbufferDataIn = numpy.tile(numpy.zeros((self.DAQBufferSize,), dtype=numpy.float64),(self.numChannels,1)) # Time column-wise
+        # self.DAQbufferDataIn = numpy.tile(numpy.zeros((self.DAQBufferSize,), dtype=numpy.float64),(self.numChannels,1)) # Time row-wise
         self.CreateAIVoltageChan(self.aiChannelIDs,"Analog inputs",DAQmx_Val_RSE,self.Vrange[0],self.Vrange[1],DAQmx_Val_Volts,None)
         self.CfgSampClkTiming("",self.airt,DAQmx_Val_Rising,DAQmx_Val_ContSamps,self.DAQBufferSize)
         self.AutoRegisterEveryNSamplesEvent(DAQmx_Val_Acquired_Into_Buffer,self.DAQBufferSize,0,name='EveryNCallback')
         self.AutoRegisterDoneEvent(0,name='DoneCallback')
         self.StartTask()
-        # self.ReadAnalogF64(self.DAQBufferSize,self.timeout,DAQmx_Val_GroupByChannel,self.DAQbufferDataIn,self.DAQBufferSize*self.numaiChannels,byref(self.read),None)
-
-
-
+        # self.ReadAnalogF64(self.DAQBufferSize,self.timeout,DAQmx_Val_GroupByChannel,self.DAQbufferDataIn,self.DAQBufferSize*self.numChannels,byref(self.read),None)
 
         # ANALOG OUTPUT (Servo command)
         self.ao = Task()
-# OLD        self.ao.aowritedata = numpy.arange(1, dtype=numpy.float64)*0
-
+        self.ao.servowritedata = numpy.arange(1, dtype=numpy.float64)*0
         self.ao.numsamples = 1
-        self.ao.aowritedata = numpy.tile(numpy.zeros((self.ao.numsamples,), dtype=numpy.float64), (self.numaoChannels, 1))
         self.ao.write = int32()
-
-# OLD        self.ao.CreateAOVoltageChan(vbaconfig.channels['aoChannelIDs'],"Analog output",self.scaleServoSet.signal[0],self.scaleServoSet.signal[1],DAQmx_Val_Volts,None)
-        self.ao.CreateAOVoltageChan(vbaconfig.channels['aoChannelIDs'],"",self.Vrange[0],self.Vrange[1],DAQmx_Val_Volts,None)
-
+        self.ao.CreateAOVoltageChan(vbaconfig.channels['aoChannelIDs'],"Analog output",self.scaleServoSet.signal[0],self.scaleServoSet.signal[1],DAQmx_Val_Volts,None)
         self.ao.StartTask()
-        # self.ao.WriteAnalogF64(self.ao.numsamples,self.autostart,self.timeout,DAQmx_Val_GroupByChannel,self.ao.aowritedata+2.5,self.ao.write,None)
-
-
-
+        # self.ao.WriteAnalogF64(self.ao.numsamples,self.autostart,self.timeout,DAQmx_Val_GroupByChannel,self.ao.servowritedata+2.5,self.ao.write,None)
 
         # DIGITAL INPUT (Toggle closed / open loop mode)
         self.di = Task()
@@ -140,7 +127,7 @@ class DAQCallbackTask(Task):
     def EveryNCallback(self):
 
         # Get analog input
-        self.ReadAnalogF64(self.DAQBufferSize,self.timeout,DAQmx_Val_GroupByChannel,self.DAQbufferDataIn,self.DAQBufferSize*self.numaiChannels,byref(self.read),None)
+        self.ReadAnalogF64(self.DAQBufferSize,self.timeout,DAQmx_Val_GroupByChannel,self.DAQbufferDataIn,self.DAQBufferSize*self.numChannels,byref(self.read),None)
         self.aiDataForSigProc = self.DAQbufferDataIn
 
         # Get digital input and update window if it changes
@@ -172,16 +159,9 @@ class DAQCallbackTask(Task):
     def updateOutputTrigger(self,state):
         self.do.WriteDigitalScalarU32(1,1,state,None)
 
-    # def updateServoPosition(self,position):
-    #     scaledPosition = self.ao.aowritedata + self.scaleServoSet.act2sig(position) #(position/self.rangeServo[1])*self.rangeServoSet[1]
-    #     self.ao.WriteAnalogF64(self.ao.numsamples,self.autostart,self.timeout,DAQmx_Val_GroupByChannel,scaledPosition,self.ao.write,None)
-
-    def updateaowrite(self,servoposition,vbastate):
-        tmpaowrite = self.ao.aowritedata
-
-        scaledPosition = self.ao.aowritedata[0] + self.scaleServoSet.act2sig(position) #(position/self.rangeServo[1])*self.rangeServoSet[1]
+    def updateServoPosition(self,position):
+        scaledPosition = self.ao.servowritedata + self.scaleServoSet.act2sig(position) #(position/self.rangeServo[1])*self.rangeServoSet[1]
         self.ao.WriteAnalogF64(self.ao.numsamples,self.autostart,self.timeout,DAQmx_Val_GroupByChannel,scaledPosition,self.ao.write,None)
-
 
     def clearDAQ(self):
         self.ao.StopTask()
