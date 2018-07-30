@@ -104,7 +104,7 @@ class DAQCallbackTask(Task):
         self.ao.CreateAOVoltageChan(vbaconfig.channels['aoChannelIDs'],"",self.Vrange[0],self.Vrange[1],DAQmx_Val_Volts,None)
 
         self.ao.StartTask()
-        # self.ao.WriteAnalogF64(self.ao.numsamples,self.autostart,self.timeout,DAQmx_Val_GroupByChannel,self.ao.aowritedata+2.5,self.ao.write,None)
+        self.ao.WriteAnalogF64(self.ao.numsamples,self.autostart,self.timeout,DAQmx_Val_GroupByChannel,self.ao.aowritedata+2.5,self.ao.write,None)
 
 
 
@@ -172,16 +172,10 @@ class DAQCallbackTask(Task):
     def updateOutputTrigger(self,state):
         self.do.WriteDigitalScalarU32(1,1,state,None)
 
-    # def updateServoPosition(self,position):
-    #     scaledPosition = self.ao.aowritedata + self.scaleServoSet.act2sig(position) #(position/self.rangeServo[1])*self.rangeServoSet[1]
-    #     self.ao.WriteAnalogF64(self.ao.numsamples,self.autostart,self.timeout,DAQmx_Val_GroupByChannel,scaledPosition,self.ao.write,None)
-
-    def updateaowrite(self,servoposition,vbastate):
-        tmpaowrite = self.ao.aowritedata
-
-        scaledPosition = self.ao.aowritedata[0] + self.scaleServoSet.act2sig(position) #(position/self.rangeServo[1])*self.rangeServoSet[1]
-        self.ao.WriteAnalogF64(self.ao.numsamples,self.autostart,self.timeout,DAQmx_Val_GroupByChannel,scaledPosition,self.ao.write,None)
-
+    def updateServoPosition(self,position):
+        pass
+        # scaledPosition = self.ao.aowritedata + self.scaleServoSet.act2sig(position) #(position/self.rangeServo[1])*self.rangeServoSet[1]
+        # self.ao.WriteAnalogF64(self.ao.numsamples,self.autostart,self.timeout,DAQmx_Val_GroupByChannel,scaledPosition,self.ao.write,None)
 
     def clearDAQ(self):
         self.ao.StopTask()

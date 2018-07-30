@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d56a0b5d-0c47-41d7-9251-ff45ada8ded9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VBAcmd3.pyw" afterPath="$PROJECT_DIR$/VBAcmd3.pyw" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VBAconfig.py.template" afterPath="$PROJECT_DIR$/VBAconfig.py.template" />
     </list>
     <ignored path="VBAcmd.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,8 +25,8 @@
       <file leaf-file-name="VBAcmd3.pyw" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/VBAcmd3.pyw">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="179" column="40" selection-start-line="179" selection-start-column="8" selection-end-line="179" selection-end-column="40" />
+            <state relative-caret-position="660">
+              <caret line="106" column="8" selection-start-line="106" selection-start-column="8" selection-end-line="106" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -774,8 +772,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/VBAcmd3.pyw">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="179" column="40" selection-start-line="179" selection-start-column="8" selection-end-line="179" selection-end-column="40" />
+        <state relative-caret-position="660">
+          <caret line="106" column="8" selection-start-line="106" selection-start-column="8" selection-end-line="106" selection-end-column="8" />
           <folding />
         </state>
       </provider>
