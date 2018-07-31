@@ -101,26 +101,16 @@ class DAQCallbackTask(Task):
         self.StartTask()
         # self.ReadAnalogF64(self.DAQBufferSize,self.timeout,DAQmx_Val_GroupByChannel,self.DAQbufferDataIn,self.DAQBufferSize*self.numaiChannels,byref(self.read),None)
 
-
-
-
         # ANALOG OUTPUT (Servo command)
         self.ao = Task()
 # OLD        self.ao.aowritedata = numpy.arange(1, dtype=numpy.float64)*0
-
         self.ao.numsamples = 1
         self.ao.aowritedata = numpy.tile(numpy.zeros((self.ao.numsamples,), dtype=numpy.float64), (self.numaoChannels, 1))
         self.ao.write = int32()
-
 # OLD        self.ao.CreateAOVoltageChan(vbaconfig.channels['aoChannelIDs'],"Analog output",self.scaleServoSet.signal[0],self.scaleServoSet.signal[1],DAQmx_Val_Volts,None)
         self.ao.CreateAOVoltageChan(vbaconfig.channels['aoChannelIDs'],"",self.Vrange[0],self.Vrange[1],DAQmx_Val_Volts,None)
-
         self.ao.StartTask()
-
         # self.ao.WriteAnalogF64(self.ao.numsamples,self.autostart,self.timeout,DAQmx_Val_GroupByChannel,self.ao.aowritedata+2.5,self.ao.write,None)
-
-
-
 
         # DIGITAL INPUT (Toggle closed / open loop mode)
         self.di = Task()

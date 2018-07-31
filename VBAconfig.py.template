@@ -13,9 +13,8 @@ class VBAconfig():
 
         self.channels = {'aiChannelIDs': 'dev1/ai0:3',       # Laser / Force / Servo position / Optional analog input
                          'ainumchanels': 4,
-
-# OLD                         'aoChannelIDs': 'dev1/ao0',         # Servo command
                          'aonumchanels': 2,
+# OLD                       'aoChannelIDs': 'dev1/ao0',         # Servo command
                          'aoChannelIDs': 'dev1/ao0:1',         # Servo command / VBA state
 
                          'diChannelIDs': 'dev1/port0/line0', # Toggle closed / open loop mode
