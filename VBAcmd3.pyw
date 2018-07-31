@@ -52,6 +52,18 @@ class DAQCallbackTask(Task):
         self.scaleServoSet = Scaling(vbaconfig.encoding['rangeServoSet'],vbaconfig.encoding['rangeServoSetVcmd'],vbaconfig.encoding['unitServoSet'])
         self.scaleAI       = Scaling(vbaconfig.encoding['rangeAI'],vbaconfig.encoding['rangeAIVout'],vbaconfig.encoding['unitAI'])
 
+        # VBA state analog output code
+        self.aoVBAstateCode = {'manual-slacken':      -2,
+                               'manual-pull':         -1,
+                               'stick-wait4start':     0,
+                               'stick-pull':           1,
+                               'stick-slacken':        2,
+                               'stick-ready':          3,
+                               'stick-ready-nojiggle': 4,
+                               'stick-launch':         5,
+                               'confused':            -5,
+                               }
+
         # ANALOG INPUT (Laser / Force / Servo position / Optional analog input)
         self.numaiChannels =  vbaconfig.channels['ainumchanels']
         self.aiChannelIDs =   vbaconfig.channels['aiChannelIDs']
@@ -105,9 +117,7 @@ class DAQCallbackTask(Task):
 
         self.ao.StartTask()
 
-        self.ao.aowritedata[0] = 1
-        self.ao.aowritedata[1] = 3
-        self.ao.WriteAnalogF64(self.ao.numsamples,self.autostart,self.timeout,DAQmx_Val_GroupByChannel,self.ao.aowritedata+0,self.ao.write,None)
+        # self.ao.WriteAnalogF64(self.ao.numsamples,self.autostart,self.timeout,DAQmx_Val_GroupByChannel,self.ao.aowritedata+2.5,self.ao.write,None)
 
 
 
@@ -175,10 +185,17 @@ class DAQCallbackTask(Task):
     def updateOutputTrigger(self,state):
         self.do.WriteDigitalScalarU32(1,1,state,None)
 
+# OLD    def updateServoPosition(self,position):
+# OLD        scaledPosition = self.ao.aowritedata + self.scaleServoSet.act2sig(position) #(position/self.rangeServo[1])*self.rangeServoSet[1]
+# OLD        self.ao.WriteAnalogF64(self.ao.numsamples,self.autostart,self.timeout,DAQmx_Val_GroupByChannel,scaledPosition,self.ao.write,None)
+
     def updateServoPosition(self,position):
-        pass
-        # scaledPosition = self.ao.aowritedata + self.scaleServoSet.act2sig(position) #(position/self.rangeServo[1])*self.rangeServoSet[1]
-        # self.ao.WriteAnalogF64(self.ao.numsamples,self.autostart,self.timeout,DAQmx_Val_GroupByChannel,scaledPosition,self.ao.write,None)
+        self.ao.aowritedata[0] = self.scaleServoSet.act2sig(position) #(position/self.rangeServo[1])*self.rangeServoSet[1]
+        self.ao.WriteAnalogF64(self.ao.numsamples,self.autostart,self.timeout,DAQmx_Val_GroupByChannel,self.ao.aowritedata,self.ao.write,None)
+
+    def updateaoVBAstate(self,VBAstate):
+        self.ao.aowritedata[1] = VBAstate
+        self.ao.WriteAnalogF64(self.ao.numsamples,self.autostart,self.timeout,DAQmx_Val_GroupByChannel,self.ao.aowritedata,self.ao.write,None)
 
     def clearDAQ(self):
         self.ao.StopTask()
@@ -270,9 +287,7 @@ class Main(QtGui.QMainWindow):
         self.ui.manualRadioButton.toggled.connect(self.manualRadioButton_toggled)
         self.ui.slackPositionRadioButton.toggled.connect(self.slackPositionRadioButton_toggled)
         self.ui.laserSDThresholdDoubleSpinBox.valueChanged.connect(self.laserSDThreshold_changed)
-
         self.ui.calibratePushButton.clicked.connect(self.calibratePushButton_clicked)
-
         # Set up event signals
         app.aboutToQuit.connect(self.shutDown)
         self.writeSignal.connect(self.sigProcess)
@@ -455,32 +470,43 @@ class Main(QtGui.QMainWindow):
         if self.controlMode_manual: # Set servo position  manually
             if self.servoState_slackening:
                 self.task.updateServoPosition(self.ui.slackPositionDoubleSpinBox.value())
+                self.task.updateaoVBAstate(self.task.aoVBAstateCode['manual-slacken'])
             if not self.servoState_slackening:
                 self.task.updateServoPosition(self.ui.pullPositionDoubleSpinBox.value())
+                self.task.updateaoVBAstate(self.task.aoVBAstateCode['manual-pull'])
         else:
             if self.task.VBAFSMstate[1] == 'waiting4start':
                 self.ui.tubeStateTextLabel.setText('WAITING FOR START SIGNAL')
                 self.ui.tubeStateTextLabel.setStyleSheet('color: black')
                 self.timer = time()
                 self.task.updateServoPosition(self.ui.slackPositionDoubleSpinBox.value()) # Set servo position to slack
+                self.task.updateaoVBAstate(self.task.aoVBAstateCode['stick-wait4start'])
             elif self.task.VBAFSMstate[1] == 'pullingBack':
                 self.ui.tubeStateTextLabel.setText('PULLING BACK')
                 self.ui.tubeStateTextLabel.setStyleSheet('color: darkCyan')
                 self.timer = time()
                 self.task.updateServoPosition(self.ui.pullPositionDoubleSpinBox.value()) # Set servo position to pull
+                self.task.updateaoVBAstate(self.task.aoVBAstateCode['stick-pull'])
             elif self.task.VBAFSMstate[1] == 'slackening':
                 self.ui.tubeStateTextLabel.setText('SLACKENING')
                 self.ui.tubeStateTextLabel.setStyleSheet('color: darkGreen')
                 self.timer = time()
                 self.task.updateServoPosition(self.ui.slackPositionDoubleSpinBox.value()) # Set servo position to slack
+                self.task.updateaoVBAstate(self.task.aoVBAstateCode['stick-slacken'])
             elif self.task.VBAFSMstate[1] == 'ready':
                 self.ui.tubeStateTextLabel.setText('READY TO LAUNCH')
                 self.ui.tubeStateTextLabel.setStyleSheet('color: darkMagenta;')
+                if self.outputTriggerHigh:
+                    self.task.updateaoVBAstate(self.task.aoVBAstateCode['stick-ready'])
+                else:
+                    self.task.updateaoVBAstate(self.task.aoVBAstateCode['stick-ready-nojiggle'])
             elif self.task.VBAFSMstate[1] == 'launching':
                 self.ui.tubeStateTextLabel.setText('!!! LAUNCHING !!!')
                 self.ui.tubeStateTextLabel.setStyleSheet('color: red')
+                self.task.updateaoVBAstate(self.task.aoVBAstateCode['stick-launch'])
             else:
                 print 'WARNING: Not in manual mode and also not in one of the FSM states'
+                self.task.updateaoVBAstate(self.task.aoVBAstateCode['confused'])
 
     def shutDown(self):
         try:
@@ -489,6 +515,7 @@ class Main(QtGui.QMainWindow):
             pass
         else:
             self.task.updateServoPosition(self.ui.slackPositionDoubleSpinBox.value()) # Set servo position to slack
+            self.task.updateaoVBAstate(0)
             self.task.vbafsm.CMDhaltLoopSignal = 1
             self.paramLoad.saveUserParams(self.usrPrms)
             self.task.updateOutputTrigger(0)
