@@ -34,7 +34,7 @@ class VBAconfig():
                          'rangeLaserVout':    [2, 10],     # output signal   2V to 10V           ILD1302-50 with 500 Ohm shunt
                          'unitLaser':         'mm',
                          'rangeAI':           [-10, 10],   # analog in range -10 to +10 V     OPTIONAL
-                         'rangeAIVout':       [-10, 10],   # output signal   -10V to 5V          Analog input
+                         'rangeAIVout':       [-10, 10],   # output signal   -10V to 10V          Analog input
                          'unitAI':            'V',
                          }
 
