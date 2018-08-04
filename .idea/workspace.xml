@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d56a0b5d-0c47-41d7-9251-ff45ada8ded9" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VBAconfig.py.template" afterPath="" />
-    </list>
+    <list default="true" id="d56a0b5d-0c47-41d7-9251-ff45ada8ded9" name="Default" comment="" />
     <ignored path="VBAcmd.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
