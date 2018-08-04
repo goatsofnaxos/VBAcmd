@@ -16,6 +16,7 @@ Anaconda is strongly recommended over WinPython
 Instructions (detailed step-by-step instructions to come):
   - Rename VBAconfig.py.template to VBAconfig.py 
   - If necessary correct DAQ and scaling parameters in the new VBAconfig.py file (git pull will not overwrite your local VBAconfig.py file)
+  - Select one of the two rangeForce scaling options depending on amplifier
   - Run VBAcmd3.pyw
 
 Requires:
