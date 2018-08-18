@@ -391,13 +391,6 @@ class Main(QtGui.QMainWindow):
         self.curveLaserThreshold.attach(self.ui.positionPlot)
         self.curveLaserThreshold.setPen(Qt.QPen(Qt.Qt.darkCyan, 1))
         self.curveLaserThreshold.setData(self.task.circBufferTimeShort,self.task.circBufferLaserThreshold)
-        # Generate and plot laser position curve
-        self.curveLaser = Qwt.QwtPlotCurve()
-        self.curveLaser.attach(self.ui.positionPlot)
-        if self.task.animalNotMovedInNSeconds: penColor = Qt.Qt.blue;     penSize = 2
-        else:                                  penColor = Qt.Qt.darkBlue; penSize = 1
-        self.curveLaser.setPen(Qt.QPen(penColor, penSize))
-        self.curveLaser.setData(self.task.circBufferTimeLong,self.task.circBufferLaser)
         # Generate and plot servo position curve
         self.curveServo = Qwt.QwtPlotCurve()
         self.curveServo.attach(self.ui.positionPlot)
@@ -405,6 +398,13 @@ class Main(QtGui.QMainWindow):
         else:                         penColor = Qt.Qt.darkMagenta; penSize = 1
         self.curveServo.setPen(Qt.QPen(penColor, penSize))
         self.curveServo.setData(self.task.circBufferTimeLong,self.task.circBufferServo)
+        # Generate and plot laser position curve
+        self.curveLaser = Qwt.QwtPlotCurve()
+        self.curveLaser.attach(self.ui.positionPlot)
+        if self.task.animalNotMovedInNSeconds: penColor = Qt.Qt.blue;     penSize = 2
+        else:                                  penColor = Qt.Qt.darkBlue; penSize = 1
+        self.curveLaser.setPen(Qt.QPen(penColor, penSize))
+        self.curveLaser.setData(self.task.circBufferTimeLong,self.task.circBufferLaser)
         
         ## BOTTOM PLOT
         # Generate and plot force threshold curve
