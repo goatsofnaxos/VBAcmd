@@ -486,10 +486,10 @@ class Main(QtGui.QMainWindow):
             elif self.task.VBAFSMstate[1] == 'ready':
                 self.ui.tubeStateTextLabel.setText('READY TO LAUNCH')
                 self.ui.tubeStateTextLabel.setStyleSheet('color: darkMagenta;')
-                if self.outputTriggerHigh:
-                    self.task.updateaoVBAstate(self.task.aoVBAstateCode['stick-ready'])
-                else:
+                if self.outputTriggerHigh > 0:
                     self.task.updateaoVBAstate(self.task.aoVBAstateCode['stick-ready-nojiggle'])
+                else:
+                    self.task.updateaoVBAstate(self.task.aoVBAstateCode['stick-ready'])
             elif self.task.VBAFSMstate[1] == 'launching':
                 self.ui.tubeStateTextLabel.setText('!!! LAUNCHING !!!')
                 self.ui.tubeStateTextLabel.setStyleSheet('color: red')
