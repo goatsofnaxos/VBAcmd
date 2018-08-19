@@ -319,8 +319,8 @@ class Main(QtGui.QMainWindow):
         else:
             if self.outputTriggerHigh != self.task.vbafsm.CMDtriggerHigh:
                 self.outputTriggerHigh = self.task.vbafsm.CMDtriggerHigh
-                self.task.updateOutputTrigger(self.outputTriggerHigh)
-
+                self.task.updateOutputTrigger(self.outputTriggerHigh)        
+                
         # Set up indexing to move AI and DI to circular buffer
         if self.circBufIndex >= self.task.circBufferDI.size:
             self.circBufIndex = 0
@@ -368,6 +368,13 @@ class Main(QtGui.QMainWindow):
             self.drawTraceSignal.emit()
         # Update position of circular buffer for next DAQ read
         self.circBufIndex = self.circBufIndex + 1
+        
+        # Update VBA state analog output if in automatic momde and toggling between ready and ready-nojiggle
+        if not self.controlMode_manual and self.task.VBAFSMstate[1] == 'ready':
+            if self.outputTriggerHigh > 0:
+                self.task.updateaoVBAstate(self.task.aoVBAstateCode['stick-ready-nojiggle'])
+            else:
+                self.task.updateaoVBAstate(self.task.aoVBAstateCode['stick-ready'])
 
         # Make sure signal processing isn't taking too long relative to acquisition buffer length
         execTiming = (time()-execTimingStart) * 1000
@@ -486,10 +493,6 @@ class Main(QtGui.QMainWindow):
             elif self.task.VBAFSMstate[1] == 'ready':
                 self.ui.tubeStateTextLabel.setText('READY TO LAUNCH')
                 self.ui.tubeStateTextLabel.setStyleSheet('color: darkMagenta;')
-                if self.outputTriggerHigh > 0:
-                    self.task.updateaoVBAstate(self.task.aoVBAstateCode['stick-ready-nojiggle'])
-                else:
-                    self.task.updateaoVBAstate(self.task.aoVBAstateCode['stick-ready'])
             elif self.task.VBAFSMstate[1] == 'launching':
                 self.ui.tubeStateTextLabel.setText('!!! LAUNCHING !!!')
                 self.ui.tubeStateTextLabel.setStyleSheet('color: red')
