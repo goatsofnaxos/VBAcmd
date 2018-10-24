@@ -53,15 +53,15 @@ class DAQCallbackTask(Task):
         self.scaleAI       = Scaling(vbaconfig.encoding['rangeAI'],vbaconfig.encoding['rangeAIVout'],vbaconfig.encoding['unitAI'])
 
         # VBA state analog output code
-        self.aoVBAstateCode = {'manual-slacken':      -2,
-                               'manual-pull':         -1,
-                               'stick-wait4start':     0,
-                               'stick-pull':           1,
-                               'stick-slacken':        2,
-                               'stick-ready':          3,
-                               'stick-ready-nojiggle': 4,
-                               'stick-launch':         5,
-                               'confused':            -5,
+        self.aoVBAstateCode = {'manual-slacken':     -2,
+                               'manual-pull':        -1,
+                               'auto-wait4start':     0,
+                               'auto-pull':           1,
+                               'auto-slacken':        2,
+                               'auto-ready':          3,
+                               'auto-ready-nojiggle': 4,
+                               'auto-launch':         5,
+                               'confused':           -5,
                                }
 
         # ANALOG INPUT (Laser / Force / Servo position / Optional analog input)
@@ -372,9 +372,9 @@ class Main(QtGui.QMainWindow):
         # Update VBA state analog output if in automatic momde and toggling between ready and ready-nojiggle
         if not self.controlMode_manual and self.task.VBAFSMstate[1] == 'ready':
             if self.outputTriggerHigh > 0:
-                self.task.updateaoVBAstate(self.task.aoVBAstateCode['stick-ready-nojiggle'])
+                self.task.updateaoVBAstate(self.task.aoVBAstateCode['auto-ready-nojiggle'])
             else:
-                self.task.updateaoVBAstate(self.task.aoVBAstateCode['stick-ready'])
+                self.task.updateaoVBAstate(self.task.aoVBAstateCode['auto-ready'])
 
         # Make sure signal processing isn't taking too long relative to acquisition buffer length
         execTiming = (time()-execTimingStart) * 1000
@@ -477,26 +477,26 @@ class Main(QtGui.QMainWindow):
                 self.ui.tubeStateTextLabel.setStyleSheet('color: black')
                 self.timer = time()
                 self.task.updateServoPosition(self.ui.slackPositionDoubleSpinBox.value()) # Set servo position to slack
-                self.task.updateaoVBAstate(self.task.aoVBAstateCode['stick-wait4start'])
+                self.task.updateaoVBAstate(self.task.aoVBAstateCode['auto-wait4start'])
             elif self.task.VBAFSMstate[1] == 'pullingBack':
                 self.ui.tubeStateTextLabel.setText('PULLING BACK')
                 self.ui.tubeStateTextLabel.setStyleSheet('color: darkCyan')
                 self.timer = time()
                 self.task.updateServoPosition(self.ui.pullPositionDoubleSpinBox.value()) # Set servo position to pull
-                self.task.updateaoVBAstate(self.task.aoVBAstateCode['stick-pull'])
+                self.task.updateaoVBAstate(self.task.aoVBAstateCode['auto-pull'])
             elif self.task.VBAFSMstate[1] == 'slackening':
                 self.ui.tubeStateTextLabel.setText('SLACKENING')
                 self.ui.tubeStateTextLabel.setStyleSheet('color: darkGreen')
                 self.timer = time()
                 self.task.updateServoPosition(self.ui.slackPositionDoubleSpinBox.value()) # Set servo position to slack
-                self.task.updateaoVBAstate(self.task.aoVBAstateCode['stick-slacken'])
+                self.task.updateaoVBAstate(self.task.aoVBAstateCode['auto-slacken'])
             elif self.task.VBAFSMstate[1] == 'ready':
                 self.ui.tubeStateTextLabel.setText('READY TO LAUNCH')
                 self.ui.tubeStateTextLabel.setStyleSheet('color: darkMagenta;')
             elif self.task.VBAFSMstate[1] == 'launching':
                 self.ui.tubeStateTextLabel.setText('!!! LAUNCHING !!!')
                 self.ui.tubeStateTextLabel.setStyleSheet('color: red')
-                self.task.updateaoVBAstate(self.task.aoVBAstateCode['stick-launch'])
+                self.task.updateaoVBAstate(self.task.aoVBAstateCode['auto-launch'])
             else:
                 print 'WARNING: Not in manual mode and also not in one of the FSM states'
                 self.task.updateaoVBAstate(self.task.aoVBAstateCode['confused'])
