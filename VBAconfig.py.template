@@ -27,7 +27,7 @@ class VBAconfig():
                          'rangeServoSet':     [0, 50],     # travel range   0 to 50 mm        FIRGELLI command
                          'rangeServoSetVcmd': [0, 5],      # command signal 0 to 5 V             L12-50-50-12-I
                          'unitServoSet':      'mm',
-                         # UNCOMMENT the 'rangeForce' and 'rangeForceVout' lines according to whether using the FUTEK IA100 or LEO BODNER load cell amplifier (most versions after Sept 2018 use LEO BODNER solution so try that first)
+                         # UNCOMMENT a pair of 'rangeForce' and 'rangeForceVout' lines according to whether using the FUTEK IA100 or LEO BODNER load cell amplifier (most versions after Sept 2018 use LEO BODNER solution so try that first)
                          # 'rangeForce':        [-250, 250], # force range    -250 to +250 g    FUTEK LSB200 (FSH03871) load cell
                          # 'rangeForceVout':    [-10, 10],   # output signal  -10 to +10 V          with IAA100 signal conditioner in +/-10 VDC mode
                          # 'rangeForce':        [0, 250],    # force range    0 to +250 g       FUTEK LSB200 (FSH03871) load cell
