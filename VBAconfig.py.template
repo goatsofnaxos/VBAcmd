@@ -34,7 +34,8 @@ class VBAconfig():
                          # 'rangeForceVout':    [0, 4.9],    # output signal  0 to +4.9 V          with LEO BODNER uni-directional Load Cell Amplifier
                          'unitForce':         'g',
                          'rangeLaser':        [0, 100],    # position range  0 to 100 mm      MICRO-EPSILON
-                         'rangeLaserVout':    [2, 10],     # output signal   2V to 10V           ILD1302-50 with 500 Ohm shunt
+                         # 'rangeLaserVout':    [2, 10],     # output signal   2V to 10V           ILD1302-50 with 500 Ohm shunt
+                         'rangeLaserVout':    [1, 5],      # output signal   1V to 5V            ILD1302-50 with 250 Ohm shunt
                          'unitLaser':         'mm',
                          'rangeAI':           [-10, 10],   # analog in range -10 to +10 V     OPTIONAL
                          'rangeAIVout':       [-10, 10],   # output signal   -10V to 10V          Analog input
