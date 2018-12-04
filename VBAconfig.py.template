@@ -34,7 +34,7 @@ class VBAconfig():
                          # 'rangeForceVout':    [0, 4.9],    # output signal  0 to +4.9 V           with LEO BODNER uni-directional Load Cell Amplifier
                          'unitForce':         'g',
                          'rangeLaser':        [0, 100],    # position range  0 to 100 mm      MICRO-EPSILON ILD1320-100 displacement sensor
-                         # UNCOMMENT one of 'rangeLaserVout' lines according to whether using 500 Ohm or 250 Ohm scaling resistor (most versions after Dec 2018 use 250 Ohm so try that first)
+                         # UNCOMMENT one of the 'rangeLaserVout' lines according to whether using 500 Ohm or 250 Ohm scaling resistor (most versions after Dec 2018 use 250 Ohm so try that first)
                          # 'rangeLaserVout':    [2, 10],     # output signal   2V to 10V            with 500 Ohm scaling resistor
                          # 'rangeLaserVout':    [1, 5],      # output signal   1V to 5V             with 250 Ohm scaling resistor
                          'unitLaser':         'mm',
