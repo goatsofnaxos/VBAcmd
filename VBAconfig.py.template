@@ -27,16 +27,16 @@ class VBAconfig():
                          'rangeServoSet':     [0, 50],     # travel range   0 to 50 mm        FIRGELLI command
                          'rangeServoSetVcmd': [0, 5],      # command signal 0 to 5 V             L12-50-50-12-I
                          'unitServoSet':      'mm',
-                         # UNCOMMENT the 'rangeForce' and 'rangeForceVout' lines according to whether using the FUTEK IA100 or LEO BODNER load cell amplifier (most versions will use LEO BODNER solution so try that first)
+                         # UNCOMMENT the 'rangeForce' and 'rangeForceVout' lines according to whether using the FUTEK IA100 or LEO BODNER load cell amplifier (most versions after Sept 2018 use LEO BODNER solution so try that first)
                          # 'rangeForce':        [-250, 250], # force range    -250 to +250 g    FUTEK LSB200 (FSH03871) load cell
                          # 'rangeForceVout':    [-10, 10],   # output signal  -10 to +10 V          with IAA100 signal conditioner in +/-10 VDC mode
                          # 'rangeForce':        [0, 250],    # force range    0 to +250 g       FUTEK LSB200 (FSH03871) load cell
                          # 'rangeForceVout':    [0, 4.9],    # output signal  0 to +4.9 V           with LEO BODNER uni-directional Load Cell Amplifier
                          'unitForce':         'g',
-                         'rangeLaser':        [0, 100],    # position range  0 to 100 mm      MICRO-EPSILON
-                         # UNCOMMENT the 'rangeLaserVout' line according to whether using 500 Ohm or 250 Ohm scaling (most versions will have 250 Ohm so try that first)
-                         # 'rangeLaserVout':    [2, 10],     # output signal   2V to 10V            ILD1320-100 with 500 Ohm shunt
-                         # 'rangeLaserVout':    [1, 5],      # output signal   1V to 5V             ILD1320-100 with 250 Ohm shunt
+                         'rangeLaser':        [0, 100],    # position range  0 to 100 mm      MICRO-EPSILON ILD1320-100 displacement sensor
+                         # UNCOMMENT the 'rangeLaserVout' line according to whether using 500 Ohm or 250 Ohm scaling resistor (most versions after Dec 2018 use 250 Ohm so try that first)
+                         # 'rangeLaserVout':    [2, 10],     # output signal   2V to 10V            with 500 Ohm scaling resistor
+                         # 'rangeLaserVout':    [1, 5],      # output signal   1V to 5V             with 250 Ohm scaling resistor
                          'unitLaser':         'mm',
                          'rangeAI':           [-10, 10],   # analog in range -10 to +10 V     OPTIONAL
                          'rangeAIVout':       [-10, 10],   # output signal   -10V to 10V          Analog input
