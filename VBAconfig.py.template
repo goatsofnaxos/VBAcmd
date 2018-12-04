@@ -38,7 +38,7 @@ class VBAconfig():
                          # 'rangeLaserVout':    [2, 10],     # output signal   2V to 10V            with 500 Ohm scaling resistor
                          # 'rangeLaserVout':    [1, 5],      # output signal   1V to 5V             with 250 Ohm scaling resistor
                          'unitLaser':         'mm',
-                         'rangeAI':           [-10, 10],   # analog in range -10 to +10 V     OPTIONAL
+                         'rangeAI':           [-10, 10],   # analog in range -10V to +10 V     OPTIONAL
                          'rangeAIVout':       [-10, 10],   # output signal   -10V to 10V          Analog input
                          'unitAI':            'V',
                          }
