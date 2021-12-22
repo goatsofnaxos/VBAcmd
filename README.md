@@ -1,8 +1,6 @@
 # VBAcmd
 Hardware, electronics, and FSM-based control software for Virtual Burrow Assay
 
-© 2017 The Trustees of Columbia University in the City of New York. All Rights Reserved.
-
 The design and software in this repository are still experimental. We have done our best to document how to set up a Virtual Burrow Assay but we are scientists not device manufacturers. So this is likely to be buggy and the software may not play nice on many platforms. At some point the device will be manufactured and distributed by [Sanworks](https://www.sanworks.io/), and the design and software will be improved for distribution, while remaining open-source.
 
 Instructions in the ASSEMBLY folder.
