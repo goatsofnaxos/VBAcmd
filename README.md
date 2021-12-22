@@ -5,8 +5,6 @@ The drawings, wiring and software in this repository are still experimental. We 
 
 Instructions in the [Assembly](https://github.com/goatsofnaxos/VBAcmd/tree/master/ASSEMBLY) folder.
 
-For help, email Carl Schoonover [ces2001 AT columbia DOT edu] or Andrew Fink [af2243 AT columbia DOT edu]
-
 For a description of the assay and some of its uses, see [https://doi.org/10.7554/eLife.45658.001](https://elifesciences.org/articles/45658).
 
 ![alt tag](https://raw.githubusercontent.com/goatsofnaxos/VBAcmd/master/screengrab3.png)
