@@ -1,7 +1,7 @@
 # VBAcmd
 Hardware, electronics, and FSM-based control software for Virtual Burrow Assay
 
-For a description of the assay and some of its uses, see [https://doi.org/10.7554/eLife.45658.001](https://elifesciences.org/articles/45658).
+For a description of the device and some of its uses, see [https://doi.org/10.7554/eLife.45658.001](https://elifesciences.org/articles/45658).
 
 Instructions in the [Assembly](https://github.com/goatsofnaxos/VBAcmd/tree/master/Assembly) folder.
 
