@@ -8,4 +8,5 @@ For software installation follow [Software installation.pdf](https://github.com/
 
 Hardware: A. Fink, C. Schoonover, T. Tabachnik<br/>
 Electronics: A. Fink, R. Hormigo, P. O'Neill, C. Schoonover<br/>
+Software: C. Schoonover<br/>
 Assembly instructions: P. O'Neill, S. Ohashi, C. Schoonover, Phebe Warren<br/>
